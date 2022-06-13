@@ -2398,8 +2398,8 @@
             "parentId": "page",
             "childIndex": 117,
             "point": [
-              1500.85,
-              33.5175791626088
+              1484.76,
+              45.58
             ],
             "rotation": 0,
             "text": "Blah blah blah blah blah blah blah blah blah blah blah",
@@ -2420,8 +2420,8 @@
             "parentId": "page",
             "childIndex": 118,
             "point": [
-              1499.74,
-              67.3581715678096
+              1485.66,
+              81.44
             ],
             "rotation": 0,
             "text": "Blah blah blah blah blah blah blah blah blah blah blah",
@@ -2442,30 +2442,8 @@
             "parentId": "page",
             "childIndex": 119,
             "point": [
-              1500.76,
-              97.08145990555974
-            ],
-            "rotation": 0,
-            "text": "Blah blah blah blah blah blah blah blah blah blah blah",
-            "style": {
-              "color": "white",
-              "size": "small",
-              "isFilled": false,
-              "dash": "draw",
-              "scale": 0.9597445378672949,
-              "font": "script",
-              "textAlign": "middle"
-            }
-          },
-          "31ad87f0-b932-469e-2c0b-5ff05c10dd59": {
-            "id": "31ad87f0-b932-469e-2c0b-5ff05c10dd59",
-            "type": "text",
-            "name": "Text",
-            "parentId": "page",
-            "childIndex": 120,
-            "point": [
-              1501.79,
-              132.97590562179656
+              1486.68,
+              123.22
             ],
             "rotation": 0,
             "text": "Blah blah blah blah blah blah blah blah blah blah blah",
