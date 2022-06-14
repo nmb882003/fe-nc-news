@@ -1,3 +1,45 @@
 .App {
   text-align: center;
 }
+
+.header {
+  border: 5px solid black;
+}
+
+.header h1 {
+  font-size: 3.5rem;
+  padding: 1rem;
+  margin: 1rem;
+}
+
+.navbar {
+  border: 5px solid limegreen;
+  padding: none;
+}
+
+.links-list {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-around;
+  padding: 0;
+}
+
+.summarylist {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.summary-card {
+  border: 1px solid black;
+  width: 340px;
+  margin: 2rem auto;
+  padding: 0.5rem;
+  border-radius: 25px;
+  box-shadow: 10px 10px 20px black;
+}
+
+.summary-card h2 {
+  font-size: 1.5rem;
+}
