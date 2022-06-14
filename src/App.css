@@ -23,3 +23,15 @@
   justify-content: space-around;
   padding: 0;
 }
+
+.summarylist {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.summary-card {
+  border: 2px solid black;
+  width: 340px;
+  margin: 2rem auto;
+  border-radius: 25px;
+}
