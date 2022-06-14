@@ -28,7 +28,7 @@ const SummaryList = () => {
                 return (
                     <li className="summary-card">
                         <p>#{summary.article_id}</p>
-                        <p>Title: {summary.title}</p>
+                        <h2>{summary.title}</h2>
                         <p>Author: {summary.author}</p>
                         <p>Topic: {summary.topic}</p>
                         <p>Comments: {summary.comment_count}</p>
