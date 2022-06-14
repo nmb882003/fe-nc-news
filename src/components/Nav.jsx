@@ -23,7 +23,7 @@ const Nav = () => {
                 {topics.map(item => {
                     return (
                         <li>
-                            <Link to={"/topics/" + item.slug}>{item.slug}</Link>
+                            <Link to={"/topics/" + item.slug + "/articles"}>{item.slug}</Link>
                         </li>
                     )
                 })}

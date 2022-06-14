@@ -15,7 +15,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/articles" element={<AllSummaries />} />
-          <Route path="/topics/:topic" element={<SummariesByTopic />} />
+          <Route path="/topics/:topic/articles" element={<SummariesByTopic />} />
         </Routes>
       </div>
     </BrowserRouter>
