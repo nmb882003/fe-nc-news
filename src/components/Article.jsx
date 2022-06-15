@@ -9,6 +9,8 @@ const Article = () => {
     const {article_id} = useParams();
 
     useEffect(() => {
+        
+
         fetch(`https://neilb-nc-news-server.herokuapp.com/api/articles/${article_id}`)
 
             .then(res => res.json())
@@ -16,14 +18,14 @@ const Article = () => {
                 setArticle(article);
                 setIsLoading(false);
             });
-    }, [])
+    }, [article_id])
 
     if (isLoading) {
         return <p>Please wait while we fetch your article...</p>
     }
 
     return (
-        <div className="articlecard-container">
+        <div>
             <ArticleCard article={article}/>
             <button onClick={() => {}}>Go Back</button>
         </div>

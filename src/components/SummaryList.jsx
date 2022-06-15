@@ -7,14 +7,15 @@ const SummaryList = () => {
     const [isLoading, setIsLoading] = useState(true);
 
     const { topic } = useParams();
-
-    let path = 'https://neilb-nc-news-server.herokuapp.com/api/articles';
-
-    if (topic) {
-        path += `?topic=${topic}`;
-    }
-
+    
     useEffect(() => {
+   
+        let path = 'https://neilb-nc-news-server.herokuapp.com/api/articles';
+
+        if (topic) {
+            path += `?topic=${topic}`;
+        }
+    
         fetch(path)
 
             .then(res => res.json())
