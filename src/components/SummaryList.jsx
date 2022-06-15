@@ -1,9 +1,12 @@
 import { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 import SummaryCard from './SummaryCard.jsx';
 
-const SummaryList = ({ topic }) => {
+const SummaryList = () => {
     const [summaryList, setSummaryList] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
+
+    const { topic } = useParams();
 
     let path = 'https://neilb-nc-news-server.herokuapp.com/api/articles';
 
@@ -35,7 +38,6 @@ const SummaryList = ({ topic }) => {
                         <SummaryCard summary={summary}/>
                     </li>
                 )
-
             })}
         </ul>
     )

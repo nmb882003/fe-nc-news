@@ -3,8 +3,8 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Home from './components/Home.jsx';
 import Header from './components/Header.jsx';
 import Nav from './components/Nav.jsx';
-import AllSummaries from './components/AllSummaries.jsx';
-import SummariesByTopic from './components/SummariesByTopic.jsx'
+import SummaryList from './components/SummaryList'
+import Article from './components/Article.jsx'
 
 function App() {
   return (
@@ -14,8 +14,9 @@ function App() {
         <Nav />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/articles" element={<AllSummaries />} />
-          <Route path="/topics/:topic/articles" element={<SummariesByTopic />} />
+          <Route path="/articles" element={<SummaryList />} />
+          <Route path="/topics/:topic/articles" element={<SummaryList />} />
+          <Route path="/articles/:article_id" element={<Article />} />
         </Routes>
       </div>
     </BrowserRouter>
