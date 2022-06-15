@@ -10,7 +10,6 @@ const Nav = () => {
         .then(res => res.json())
         .then(({topics}) => {
             setTopics(topics);
-            console.log(topics);
         })
     }, [])
 

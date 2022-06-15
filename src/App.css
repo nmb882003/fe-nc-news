@@ -31,6 +31,8 @@
   margin: 0 auto;
   list-style-type: none;
   padding-left: 0;
+  column-gap: 2rem;
+  
 }
 
 .summarycard {
@@ -41,6 +43,8 @@
   padding: 1.5rem 1rem;
   border-radius: 10px;
   box-shadow: 2px 5px 15px black;
+  
+  
 }
 
 .summarycard h2 {

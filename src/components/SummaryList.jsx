@@ -35,7 +35,7 @@ const SummaryList = () => {
             {summaryList.map(summary => {
                 return (
                     <li key={summary.article_id} className="summarycard">
-                        <SummaryCard summary={summary}/>
+                        <SummaryCard summary={summary} />
                     </li>
                 )
             })}
