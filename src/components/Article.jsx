@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import ArticleCard from './ArticleCard.jsx';
 
 const Article = () => {
@@ -8,9 +8,11 @@ const Article = () => {
 
     const {article_id} = useParams();
 
-    useEffect(() => {
-        
+    const navigate = useNavigate();
 
+    const goBack = () => navigate(-1);
+
+    useEffect(() => {
         fetch(`https://neilb-nc-news-server.herokuapp.com/api/articles/${article_id}`)
 
             .then(res => res.json())
@@ -27,7 +29,7 @@ const Article = () => {
     return (
         <div>
             <ArticleCard article={article}/>
-            <button onClick={() => {}}>Go Back</button>
+            <button onClick={() => goBack()}>Go Back</button>
         </div>
     )
 }

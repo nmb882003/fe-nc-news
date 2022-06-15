@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 const SummaryCard = ({summary}) => {
     const navigate = useNavigate();
 
-    const goBack = () => {
+    const goFullArticle = () => {
         navigate(`/articles/${summary.article_id}`);
     } 
 
@@ -15,7 +15,7 @@ const SummaryCard = ({summary}) => {
             <p>Topic: {summary.topic}</p>
             <p>Comments: {summary.comment_count}</p>
             <p>Votes: {summary.votes}</p>
-            <button onClick={() => goBack()}>Click here to read full article!</button>
+            <button onClick={() => goFullArticle()}>Click here to read full article!</button>
         </>
     )
 
