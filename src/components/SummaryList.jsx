@@ -15,7 +15,6 @@ const SummaryList = ({ topic }) => {
         fetch(path)
 
             .then(res => res.json())
-
             .then(({ articles }) => {
                 setSummaryList(articles);
                 setIsLoading(false);
