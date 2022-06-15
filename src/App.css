@@ -21,7 +21,7 @@
   display: flex;
   list-style-type: none;
   justify-content: space-around;
-  padding: 0;
+  padding: 0.5rem 0;
 }
 
 .summarylist {
@@ -33,7 +33,7 @@
   padding-left: 0;
 }
 
-.summary-card {
+.summarycard {
   border: 1px solid black;
   max-width: 650px;
   min-width: 300px;

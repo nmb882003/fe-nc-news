@@ -31,7 +31,7 @@ const SummaryList = ({ topic }) => {
         <ul className="summarylist">
             {summaryList.map(summary => {
                 return (
-                    <li key={summary.article_id} className="summary-card">
+                    <li key={summary.article_id} className="summarycard">
                         <SummaryCard summary={summary}/>
                     </li>
                 )

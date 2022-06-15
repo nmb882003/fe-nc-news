@@ -7,6 +7,7 @@ const SummaryCard = ({summary}) => {
             <p>Topic: {summary.topic}</p>
             <p>Comments: {summary.comment_count}</p>
             <p>Votes: {summary.votes}</p>
+            
         </>
     )
 
