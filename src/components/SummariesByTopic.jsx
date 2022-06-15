@@ -1,4 +1,5 @@
-import { useParams } from "react-router-dom";
+import { useParams } from 'react-router-dom';
+import SummaryList from './SummaryList.jsx';
 
 const SummariesByTopic = () => {
 
@@ -7,6 +8,7 @@ const SummariesByTopic = () => {
     return (
         <>
             <p>Showing all articles in topic: {topic}</p>
+            <SummaryList topic={topic}/>
         </>
     )
 }

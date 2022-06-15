@@ -1,24 +1,30 @@
 import { useState, useEffect } from 'react';
+import SummaryCard from './SummaryCard.jsx';
 
-const SummaryList = () => {
+const SummaryList = ({ topic }) => {
     const [summaryList, setSummaryList] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
 
+    let path = 'https://neilb-nc-news-server.herokuapp.com/api/articles';
+
+    if (topic) {
+        path += `?topic=${topic}`;
+    }
+
     useEffect(() => {
-        fetch('https://neilb-nc-news-server.herokuapp.com/api/articles')
+        fetch(path)
 
             .then(res => res.json())
 
             .then(({ articles }) => {
                 setSummaryList(articles);
                 setIsLoading(false);
-                console.log(articles);
             })
-    }, [])
+    }, [topic])
 
     if (isLoading) {
         return (
-            <p>Hello! This is the loading screen</p>
+            <p>Please wait while article data loads...</p>
         )
     }
 
@@ -26,13 +32,8 @@ const SummaryList = () => {
         <ul className="summarylist">
             {summaryList.map(summary => {
                 return (
-                    <li className="summary-card">
-                        <p>#{summary.article_id}</p>
-                        <h2>{summary.title}</h2>
-                        <p>Author: {summary.author}</p>
-                        <p>Topic: {summary.topic}</p>
-                        <p>Comments: {summary.comment_count}</p>
-                        <p>Votes: {summary.votes}</p>
+                    <li key={summary.article_id} className="summary-card">
+                        <SummaryCard summary={summary}/>
                     </li>
                 )
 
