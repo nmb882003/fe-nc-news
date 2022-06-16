@@ -1,4 +1,5 @@
-const ArticleCard = ({ article }) => {
+const ArticleCard = ({ article, votes}) => {
+
     return (
         <div className="articlecard">
             <h2>{article.title}</h2>
@@ -6,7 +7,7 @@ const ArticleCard = ({ article }) => {
             <p>Listed in topic: {article.topic}</p>
             <p>Posted by {article.author} on {article.created_at}</p>
             <p>Comments {article.comment_count}</p>
-            <p>Votes: {article.votes}</p>
+            <p>Votes: {votes}</p>
         </div>
     )
 }
