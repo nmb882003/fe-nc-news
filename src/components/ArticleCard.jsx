@@ -1,13 +1,12 @@
 const ArticleCard = ({ article }) => {
     return (
         <div className="articlecard">
-            <p>{article.title}</p>
+            <h2>{article.title}</h2>
             <p>{article.body}</p>
-            <p>{article.topic}</p>
-            <p>Author {article.author}</p>
+            <p>Listed in topic: {article.topic}</p>
+            <p>Posted by {article.author} on {article.created_at}</p>
             <p>Comments {article.comment_count}</p>
-            <p>Votes {article.votes}</p>
-            <p>Created_at {article.created_at}</p>
+            <p>Votes: {article.votes}</p>
         </div>
     )
 }
