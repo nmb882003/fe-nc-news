@@ -1,17 +1,21 @@
 import { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 import SummaryCard from './SummaryCard.jsx';
 
-const SummaryList = ({ topic }) => {
+const SummaryList = () => {
     const [summaryList, setSummaryList] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
 
-    let path = 'https://neilb-nc-news-server.herokuapp.com/api/articles';
-
-    if (topic) {
-        path += `?topic=${topic}`;
-    }
-
+    const { topic } = useParams();
+    
     useEffect(() => {
+   
+        let path = 'https://neilb-nc-news-server.herokuapp.com/api/articles';
+
+        if (topic) {
+            path += `?topic=${topic}`;
+        }
+    
         fetch(path)
 
             .then(res => res.json())
@@ -31,11 +35,10 @@ const SummaryList = ({ topic }) => {
         <ul className="summarylist">
             {summaryList.map(summary => {
                 return (
-                    <li key={summary.article_id} className="summary-card">
-                        <SummaryCard summary={summary}/>
+                    <li key={summary.article_id} className="summarycard">
+                        <SummaryCard summary={summary} />
                     </li>
                 )
-
             })}
         </ul>
     )

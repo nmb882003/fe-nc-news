@@ -21,7 +21,12 @@
   display: flex;
   list-style-type: none;
   justify-content: space-around;
-  padding: 0;
+  padding: 0.5rem 0;
+ 
+}
+
+.link {
+  text-transform: capitalize;
 }
 
 .summarylist {
@@ -31,18 +36,42 @@
   margin: 0 auto;
   list-style-type: none;
   padding-left: 0;
+  column-gap: 2rem;
+  
 }
 
-.summary-card {
+.summarycard {
   border: 1px solid black;
   max-width: 650px;
   min-width: 300px;
-  margin: 1rem auto;
-  padding: 0.5rem;
-  border-radius: 20px;
+  margin: 1.5rem auto;
+  padding: 1.5rem 1rem;
+  border-radius: 10px;
   box-shadow: 2px 5px 15px black;
 }
 
-.summary-card h2 {
+.summarycard h2 {
   font-size: 1.5rem;
+}
+
+button {
+  font-size: 1rem;
+  padding: 0.25rem 0.5rem;
+}
+
+.articlecard {
+  width: 90%;
+  max-width: 650px;
+  text-align: left;
+  margin: 2rem auto;
+  border: 1px solid black;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 2px 5px 15px black;
+}
+
+.articlecard-container {
+  width: 90%;
+  max-width: 900px;
+  margin: 1rem auto;
 }
