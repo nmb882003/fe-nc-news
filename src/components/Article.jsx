@@ -33,7 +33,7 @@ const Article = () => {
             <p className="left">Posted by user {article.author} at {article.created_at.split("T")[1].slice(0,8)} on {article.created_at.split("T")[0]}:</p>
             <ArticleCard article={article} setShowComments={setShowComments}/> 
             <button onClick={() => goBack()}>Go Back</button>
-            <CommentsList article={article} showComments={showComments}/>
+            <CommentsList article_id={article.article_id} showComments={showComments}/>
         </div>
     )
 }

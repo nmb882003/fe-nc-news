@@ -1,9 +1,10 @@
-const CommentCard = () => {
+const CommentCard = ({comment}) => {
+    console.log(comment);
     return (
         <>
-            <li>Hello!</li>
-            <li>I am</li>
-            <li>a list :)</li>
+            <p>author: {comment.author}</p>
+            <p>"{comment.body}"</p>
+            <p>Posted on: {comment.created_at}</p>
         </>
     )
 }
