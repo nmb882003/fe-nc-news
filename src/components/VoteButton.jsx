@@ -1,10 +1,7 @@
-import { useState } from 'react';
+const VoteButton = ({article, setUserVotes}) => {
+   
 
-
-const VoteButton = ({article, setVotes}) => {
-    const [userVotes, setUserVotes] = useState(0);
-
-    const patchArticleVotes = () => {
+    const updateArticleVotes = () => {
         fetch(`https://neilb-nc-news-server.herokuapp.com/api/articles/${article.article_id}`, { method: 'PATCH', body: JSON.stringify({ inc_votes: 1}),
         headers: {
             'Content-type': 'application/json; charset=UTF-8',
@@ -14,15 +11,12 @@ const VoteButton = ({article, setVotes}) => {
 
     const increaseVotes = () => {
         setUserVotes(current => current + 1);
-        setVotes(current => current + 1); /// add uservotes to current number of votes when rendering card! Don't need this!
-        patchArticleVotes();
+        updateArticleVotes();
     };
 
     const decreaseVotes = () => {
         setUserVotes(current => current - 1);
-        setVotes(current => current - 1);
     }
-    console.log(userVotes);
 
         return (
             <>
