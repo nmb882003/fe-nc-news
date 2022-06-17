@@ -6,13 +6,13 @@ const ArticleCard = ({ article, votes}) => {
 
     return (
         <div className="articlecard">
-            <h2>{article.title}</h2>
+            <h2 className="card-header">{article.title}</h2>
             <p>{article.body}</p>
             <p>Listed in topic: {article.topic}</p>
-            <p>Posted by {article.author} on {article.created_at}</p>
-            <p>Comments {article.comment_count}</p>
-            <p>Votes: {article.votes + userVotes}</p>
+            <p>{article.comment_count} comments</p>
+            <p>{article.votes + userVotes} votes</p>
             <VoteButton article={article} setUserVotes={setUserVotes}/>
+            <button>See all comments</button>
         </div>
     )
 }
