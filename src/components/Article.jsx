@@ -6,7 +6,7 @@ import CommentsList from "./CommentsList.jsx";
 const Article = () => {
     const [article, setArticle] = useState({});
     const [isLoading, setIsLoading] = useState(true);
-    const [showComments, setShowComments] = useState(true);
+    const [showComments, setShowComments] = useState(false);
 
     const { article_id } = useParams();
 
