@@ -18,7 +18,7 @@ const CommentsList = (({ article_id, showComments }) => {
             <ul className="commentslist">
                 {comments.map(comment => {
                     return (
-                        <li className="commentcard">
+                        <li className="commentcard" key={comment.comment_id}>
                             <CommentCard comment={comment}/>
                         </li>
                     )

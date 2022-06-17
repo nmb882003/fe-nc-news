@@ -1,5 +1,4 @@
 const CommentCard = ({comment}) => {
-    console.log(comment);
     return (
         <div>
             <p>"{comment.body}"</p>

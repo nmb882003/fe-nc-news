@@ -13,7 +13,7 @@ const ArticleCard = ({ article, showComments, setShowComments }) => {
     };
 
     return (
-        <div className="articlecard">
+        <article className="articlecard">
             <h2 className="card-header">{article.title}</h2>
             <p>{article.body}</p>
             <p>Listed in topic: {article.topic}</p>
@@ -21,7 +21,7 @@ const ArticleCard = ({ article, showComments, setShowComments }) => {
             <p>{article.votes + userVotes} votes</p>
             <VoteButton article={article} setUserVotes={setUserVotes}/>
             <button onClick={() => showCommentsList(showComments)}>See all comments</button>
-        </div>
+        </article>
     )
 }
 

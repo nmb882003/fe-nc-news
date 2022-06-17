@@ -8,7 +8,7 @@ const Article = () => {
     const [isLoading, setIsLoading] = useState(true);
     const [showComments, setShowComments] = useState(true);
 
-    const {article_id} = useParams();
+    const { article_id } = useParams();
 
     const navigate = useNavigate();
 
@@ -29,12 +29,14 @@ const Article = () => {
     }
 
     return (
-        <div className="articlecard-container">
-            <p className="left">Posted by user {article.author} at {article.created_at.split("T")[1].slice(0,8)} on {article.created_at.split("T")[0]}:</p>
-            <ArticleCard article={article} showComments={showComments} setShowComments={setShowComments}/> 
-            <button onClick={() => goBack()}>Go Back</button>
-            <CommentsList article_id={article.article_id} showComments={showComments}/>
-        </div>
+        <>
+            <div className="articlecard-container">
+                <p className="left">Posted by user {article.author} at {article.created_at.split("T")[1].slice(0, 8)} on {article.created_at.split("T")[0]}:</p>
+                <ArticleCard className="articlecard" article={article} showComments={showComments} setShowComments={setShowComments} />
+                <button onClick={() => goBack()}>Go Back</button>
+            </div>
+            <CommentsList article_id={article.article_id} showComments={showComments} />
+        </>
     )
 }
 
