@@ -28,7 +28,7 @@ const Article = () => {
 
     return (
         <div>
-            <ArticleCard article={article}/>
+            <ArticleCard article={article} />
             <button onClick={() => goBack()}>Go Back</button>
         </div>
     )
