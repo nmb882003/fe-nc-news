@@ -1,8 +1,16 @@
 import { useState } from 'react';
 import VoteButton from './VoteButton.jsx'; 
 
-const ArticleCard = ({ article, votes}) => {
+const ArticleCard = ({ article, showComments, setShowComments }) => {
     const [userVotes, setUserVotes] = useState(0);
+
+    const showCommentsList = (showComments) => {
+        if (showComments) {
+            setShowComments(false);
+        } else {
+            setShowComments(true);
+        }
+    };
 
     return (
         <div className="articlecard">
@@ -12,7 +20,7 @@ const ArticleCard = ({ article, votes}) => {
             <p>{article.comment_count} comments</p>
             <p>{article.votes + userVotes} votes</p>
             <VoteButton article={article} setUserVotes={setUserVotes}/>
-            <button>See all comments</button>
+            <button onClick={() => showCommentsList(showComments)}>See all comments</button>
         </div>
     )
 }

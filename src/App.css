@@ -83,3 +83,12 @@ button {
 .card-header {
   margin:0;
 }
+
+.commentslist {
+  list-style-type: none;
+}
+
+.commentcard {
+  border: 1px solid black;
+  border-radius: 5px;
+}

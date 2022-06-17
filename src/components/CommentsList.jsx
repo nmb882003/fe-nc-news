@@ -15,7 +15,7 @@ const CommentsList = (({ article_id, showComments }) => {
 
     if (showComments) {
         return (
-            <ul>
+            <ul className="commentslist">
                 {comments.map(comment => {
                     return (
                         <li>

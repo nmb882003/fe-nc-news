@@ -1,11 +1,10 @@
 const CommentCard = ({comment}) => {
     console.log(comment);
     return (
-        <>
-            <p>author: {comment.author}</p>
+        <div className="commentcard">
             <p>"{comment.body}"</p>
-            <p>Posted on: {comment.created_at}</p>
-        </>
+            <p>Posted by {comment.author} on {comment.created_at}</p>
+        </div>
     )
 }
 
