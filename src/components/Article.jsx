@@ -30,7 +30,6 @@ const Article = () => {
         <div>
             <ArticleCard article={article} />
             <button onClick={() => goBack()}>Go Back</button>
-           
         </div>
     )
 }
