@@ -23,7 +23,6 @@ const CommentsList = (({ article_id, showComments }) => {
                         </li>
                     )
                 })}
-
             </ul>
         )
     }
