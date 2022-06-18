@@ -9,7 +9,7 @@ const SummaryCard = ({summary}) => {
 
     return (
         <>
-            <h2 className="card-header">{summary.title}</h2>
+            <h3 className="card-header">{summary.title}</h3>
             <p>Author: {summary.author}</p>
             <p>Topic: {summary.topic}</p>
             <p>Comments: {summary.comment_count}</p>

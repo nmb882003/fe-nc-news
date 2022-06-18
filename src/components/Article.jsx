@@ -31,9 +31,9 @@ const Article = () => {
     return (
         <>
             <div className="articlecard-container">
-                <p className="left">Posted by user {article.author} at {article.created_at.split("T")[1].slice(0, 8)} on {article.created_at.split("T")[0]}:</p>
+                <h2>Posted by user {article.author} on {article.created_at.split("T")[0]} at {article.created_at.split("T")[1].slice(0, 8)}:</h2>
                 <ArticleCard className="articlecard" article={article} showComments={showComments} setShowComments={setShowComments} />
-                <button onClick={() => goBack()}>Go Back</button>
+                <button className="back-button" onClick={() => goBack()}>Go Back</button>
             </div>
             <CommentsList article_id={article.article_id} showComments={showComments} />
         </>

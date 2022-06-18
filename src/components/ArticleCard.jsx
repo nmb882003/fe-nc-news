@@ -14,9 +14,9 @@ const ArticleCard = ({ article, showComments, setShowComments }) => {
 
     return (
         <article className="articlecard">
-            <h2 className="card-header">{article.title}</h2>
+            <h3 className="card-header">{article.title}</h3>
             <p>{article.body}</p>
-            <p>Listed in topic: {article.topic}</p>
+            <p>Found in topic: {article.topic}</p>
             <p>{article.comment_count} comments</p>
             <p>{article.votes + userVotes} votes</p>
             <VoteButton article={article} setUserVotes={setUserVotes}/>
