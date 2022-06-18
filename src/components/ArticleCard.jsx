@@ -1,8 +1,9 @@
 import { useState } from 'react';
-import VoteButton from './VoteButton.jsx'; 
+import VoteButton from './VoteButton.jsx';
 
 const ArticleCard = ({ article, showComments, setShowComments }) => {
     const [userVotes, setUserVotes] = useState(0);
+    const [buttonLabel, setButtonLabel] = useState("Show all comments");
 
     const showCommentsList = (showComments) => {
         if (showComments) {
@@ -12,6 +13,10 @@ const ArticleCard = ({ article, showComments, setShowComments }) => {
         }
     };
 
+    const updateButtonLabel = () => {
+        (buttonLabel === "Show all comments")? setButtonLabel("Hide all comments") : setButtonLabel("Show all comments");
+    }
+
     return (
         <article className="articlecard">
             <h3 className="card-header">{article.title}</h3>
@@ -19,8 +24,12 @@ const ArticleCard = ({ article, showComments, setShowComments }) => {
             <p>Found in topic: {article.topic}</p>
             <p>{article.comment_count} comments</p>
             <p>{article.votes + userVotes} votes</p>
-            <VoteButton article={article} setUserVotes={setUserVotes}/>
-            <button onClick={() => showCommentsList(showComments)}>See all comments</button>
+            <VoteButton article={article} setUserVotes={setUserVotes} />
+            <button onClick={() => {
+                showCommentsList(showComments)
+                updateButtonLabel()
+            }
+            }>{buttonLabel} &#40;{article.comment_count}&#41;</button>
         </article>
     )
 }
