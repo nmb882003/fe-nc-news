@@ -1,12 +1,14 @@
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from 'react-router-dom';
 import ArticleCard from './ArticleCard.jsx';
+import CommentsList from "./CommentsList.jsx";
 
 const Article = () => {
     const [article, setArticle] = useState({});
     const [isLoading, setIsLoading] = useState(true);
+    const [showComments, setShowComments] = useState(false);
 
-    const {article_id} = useParams();
+    const { article_id } = useParams();
 
     const navigate = useNavigate();
 
@@ -27,10 +29,15 @@ const Article = () => {
     }
 
     return (
-        <div>
-            <ArticleCard article={article} />
-            <button onClick={() => goBack()}>Go Back</button>
-        </div>
+        <>
+
+            <h2>Posted by user {article.author} on {article.created_at.split("T")[0]} at {article.created_at.split("T")[1].slice(0, 8)}:</h2>
+            <div className="articlecard-container">
+                <ArticleCard className="articlecard" article={article} showComments={showComments} setShowComments={setShowComments} />
+                <button className="back-button" onClick={() => goBack()}>Go Back</button>
+            </div>
+            <CommentsList article_id={article.article_id} showComments={showComments} />
+        </>
     )
 }
 

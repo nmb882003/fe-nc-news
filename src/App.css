@@ -1,28 +1,38 @@
+* {
+  box-sizing: border-box;
+}
+
 .App {
   text-align: center;
 }
 
 .header {
+  display: flex;
   border: 5px solid black;
+  justify-content: center;
+  align-items: center;
+  height: 15vh;
 }
 
-.header h1 {
-  font-size: 3.5rem;
+h1 {
+  font-size: 3rem;
   padding: 1rem;
-  margin: 1rem;
+  margin: 0;
 }
 
 .navbar {
+  display: flex;
+  justify-content: center;
   border: 5px solid limegreen;
   padding: none;
 }
 
 .links-list {
   display: flex;
+  width: 100%;
   list-style-type: none;
   justify-content: space-around;
   padding: 0.5rem 0;
- 
 }
 
 .link {
@@ -34,44 +44,75 @@
   flex-wrap: wrap;
   width: 95%;
   margin: 0 auto;
+  padding: 0;
   list-style-type: none;
-  padding-left: 0;
-  column-gap: 2rem;
-  
+  column-gap: 2rem;  
 }
 
 .summarycard {
   border: 1px solid black;
   max-width: 650px;
-  min-width: 300px;
+  min-width: 320px;
   margin: 1.5rem auto;
-  padding: 1.5rem 1rem;
-  border-radius: 10px;
-  box-shadow: 2px 5px 15px black;
-}
-
-.summarycard h2 {
-  font-size: 1.5rem;
-}
-
-button {
-  font-size: 1rem;
-  padding: 0.25rem 0.5rem;
-}
-
-.articlecard {
-  width: 90%;
-  max-width: 650px;
-  text-align: left;
-  margin: 2rem auto;
-  border: 1px solid black;
   padding: 1rem;
   border-radius: 10px;
   box-shadow: 2px 5px 15px black;
 }
 
+h2 {
+  font-size: 1.75rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+button {
+  font-size: 1.25rem;
+  padding: 0.25rem 0.5rem;
+}
+
+p {
+  font-size: 1.25rem;
+  line-height: 1.4;
+  margin: 0.75rem 0;
+}
+.articlecard {
+  width: 95%;
+  margin: 3rem auto;
+  border: 1px solid black;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-sizing: border-box;
+  box-shadow: 2px 5px 15px black;
+}
+
 .articlecard-container {
-  width: 90%;
-  max-width: 900px;
+  width: 98%;
+  max-width: 1000px;
+  text-align: left;
   margin: 1rem auto;
+}
+
+.back-button {
+  display: block;
+  margin: 0 auto;
+}
+
+.card-header {
+  margin: 0;
+}
+
+.commentslist {
+  list-style-type: none;
+  padding: 0;
+}
+
+.commentcard {
+  width: 80%;
+  margin: 0 auto;
+  padding: 0.25rem 0.5rem;
+  text-align: left;
+  border: 1px solid black;
+  border-radius: 5px;
 }
