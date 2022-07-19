@@ -14,7 +14,7 @@ const ArticleCard = ({ article, showComments, setShowComments }) => {
     };
 
     const updateButtonLabel = () => {
-        (buttonLabel === "Show all comments")? setButtonLabel("Hide all comments") : setButtonLabel("Show all comments");
+        (buttonLabel === "Show all comments") ? setButtonLabel("Hide all comments") : setButtonLabel("Show all comments");
     }
 
     return (
@@ -28,8 +28,7 @@ const ArticleCard = ({ article, showComments, setShowComments }) => {
             <button onClick={() => {
                 showCommentsList(showComments)
                 updateButtonLabel()
-            }
-            }>{buttonLabel} &#40;{article.comment_count}&#41;</button>
+            }}>{buttonLabel} &#40;{article.comment_count}&#41;</button>
         </article>
     )
 }

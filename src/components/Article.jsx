@@ -30,8 +30,9 @@ const Article = () => {
 
     return (
         <>
+
+            <h2>Posted by user {article.author} on {article.created_at.split("T")[0]} at {article.created_at.split("T")[1].slice(0, 8)}:</h2>
             <div className="articlecard-container">
-                <h2>Posted by user {article.author} on {article.created_at.split("T")[0]} at {article.created_at.split("T")[1].slice(0, 8)}:</h2>
                 <ArticleCard className="articlecard" article={article} showComments={showComments} setShowComments={setShowComments} />
                 <button className="back-button" onClick={() => goBack()}>Go Back</button>
             </div>

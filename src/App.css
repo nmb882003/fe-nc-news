@@ -1,24 +1,35 @@
+* {
+  box-sizing: border-box;
+}
+
 .App {
   text-align: center;
 }
 
 .header {
+  display: flex;
   border: 5px solid black;
+  justify-content: center;
+  align-items: center;
+  height: 15vh;
 }
 
 h1 {
-  font-size: 3.5rem;
+  font-size: 3rem;
   padding: 1rem;
-  margin: 1rem;
+  margin: 0;
 }
 
 .navbar {
+  display: flex;
+  justify-content: center;
   border: 5px solid limegreen;
   padding: none;
 }
 
 .links-list {
   display: flex;
+  width: 100%;
   list-style-type: none;
   justify-content: space-around;
   padding: 0.5rem 0;
@@ -98,6 +109,9 @@ p {
 }
 
 .commentcard {
+  width: 80%;
+  margin: 0 auto;
+  padding: 0.25rem 0.5rem;
   text-align: left;
   border: 1px solid black;
   border-radius: 5px;

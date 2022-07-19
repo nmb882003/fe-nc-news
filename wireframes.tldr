@@ -6,7 +6,7 @@
     "pages": {
       "page": {
         "id": "page",
-        "name": "Page 1",
+        "name": "Wireframes",
         "childIndex": 1,
         "shapes": {
           "6d665143-83ae-43bd-0b95-16dc5927880d": {
@@ -3546,7 +3546,7 @@
       },
       "2b7b23e7-ee12-4a30-0741-0292f7e6a3e6": {
         "id": "2b7b23e7-ee12-4a30-0741-0292f7e6a3e6",
-        "name": "New Page",
+        "name": "Component tree",
         "childIndex": 2,
         "shapes": {
           "94f64f88-458b-41c5-0dbd-516b114f27df": {
@@ -3614,8 +3614,8 @@
             "parentId": "2b7b23e7-ee12-4a30-0741-0292f7e6a3e6",
             "childIndex": 3,
             "point": [
-              2030.83,
-              529.67
+              2113.5,
+              436.34
             ],
             "size": [
               217,
@@ -3701,8 +3701,8 @@
             "parentId": "2b7b23e7-ee12-4a30-0741-0292f7e6a3e6",
             "childIndex": 8,
             "point": [
-              1889.83,
-              388.67
+              2111.16,
+              340.67
             ],
             "size": [
               217,
@@ -3774,8 +3774,8 @@
             "parentId": "2b7b23e7-ee12-4a30-0741-0292f7e6a3e6",
             "childIndex": 11,
             "point": [
-              1954.83,
-              400.67
+              2176.16,
+              352.67
             ],
             "rotation": 0,
             "text": "Header",
@@ -3796,8 +3796,8 @@
             "parentId": "2b7b23e7-ee12-4a30-0741-0292f7e6a3e6",
             "childIndex": 16,
             "point": [
-              2112.33,
-              540.67
+              2195,
+              447.34
             ],
             "rotation": 0,
             "text": "Nav",
@@ -3878,7 +3878,7 @@
             "childIndex": 18,
             "point": [
               1664.83,
-              394.73
+              376.95
             ],
             "rotation": 0,
             "bend": 0,
@@ -3897,8 +3897,8 @@
                 "id": "end",
                 "index": 1,
                 "point": [
-                  209,
-                  43.44
+                  430.33,
+                  18.94
                 ],
                 "canBind": true,
                 "bindingId": "59848e02-8fe7-4a4f-13f7-239b0b6a293a"
@@ -3907,8 +3907,8 @@
                 "id": "bend",
                 "index": 2,
                 "point": [
-                  104.5,
-                  21.72
+                  215.17,
+                  9.47
                 ]
               }
             },
@@ -3936,8 +3936,8 @@
             "parentId": "2b7b23e7-ee12-4a30-0741-0292f7e6a3e6",
             "childIndex": 21,
             "point": [
-              1636.62,
-              404.67
+              1664.83,
+              392.21
             ],
             "rotation": 0,
             "bend": 0,
@@ -3956,8 +3956,8 @@
                 "id": "end",
                 "index": 1,
                 "point": [
-                  378.21,
-                  153.09
+                  432.67,
+                  79.89
                 ],
                 "canBind": true,
                 "bindingId": "3cf3e2fc-514d-441d-1d59-c6c8604d4b9f"
@@ -3966,8 +3966,8 @@
                 "id": "bend",
                 "index": 2,
                 "point": [
-                  189.11,
-                  76.55
+                  216.34,
+                  39.95
                 ]
               }
             },
@@ -4113,8 +4113,8 @@
             "parentId": "2b7b23e7-ee12-4a30-0741-0292f7e6a3e6",
             "childIndex": 7,
             "point": [
-              1623.83,
-              645.67
+              1659.83,
+              705.67
             ],
             "size": [
               217,
@@ -4142,7 +4142,7 @@
             "parentId": "2b7b23e7-ee12-4a30-0741-0292f7e6a3e6",
             "childIndex": 25,
             "point": [
-              1573.67,
+              1574.02,
               404.67
             ],
             "rotation": 0,
@@ -4162,8 +4162,8 @@
                 "id": "end",
                 "index": 1,
                 "point": [
-                  120.02,
-                  225
+                  155.09,
+                  285
                 ],
                 "canBind": true,
                 "bindingId": "d12ce843-5929-4be3-02a9-57d2fb84cfdd"
@@ -4172,8 +4172,8 @@
                 "id": "bend",
                 "index": 2,
                 "point": [
-                  60.01,
-                  112.5
+                  77.55,
+                  142.5
                 ]
               }
             },
@@ -4267,8 +4267,8 @@
             "parentId": "2b7b23e7-ee12-4a30-0741-0292f7e6a3e6",
             "childIndex": 33,
             "point": [
-              1690.83,
-              652.67
+              1726.83,
+              712.67
             ],
             "rotation": 0,
             "text": "Article",
@@ -4289,8 +4289,8 @@
             "parentId": "2b7b23e7-ee12-4a30-0741-0292f7e6a3e6",
             "childIndex": 39,
             "point": [
-              1132.33,
-              555.67
+              1116.33,
+              571.67
             ],
             "rotation": 0,
             "text": "Path: /articles",
@@ -4311,8 +4311,8 @@
             "parentId": "2b7b23e7-ee12-4a30-0741-0292f7e6a3e6",
             "childIndex": 41,
             "point": [
-              1669.33,
-              550.67
+              1700,
+              606.67
             ],
             "rotation": 0,
             "text": "Path: /articles/:article_id",
@@ -4333,8 +4333,8 @@
             "parentId": "2b7b23e7-ee12-4a30-0741-0292f7e6a3e6",
             "childIndex": 45,
             "point": [
-              1853.67,
-              675.44
+              1889.67,
+              735.44
             ],
             "rotation": 0,
             "text": "isLoading(bool)",
@@ -4421,8 +4421,8 @@
             "parentId": "2b7b23e7-ee12-4a30-0741-0292f7e6a3e6",
             "childIndex": 60,
             "point": [
-              2035.83,
-              618.67
+              2118.5,
+              525.34
             ],
             "rotation": 0,
             "text": "State: topics [{}]",
@@ -4443,8 +4443,8 @@
             "parentId": "2b7b23e7-ee12-4a30-0741-0292f7e6a3e6",
             "childIndex": 61,
             "point": [
-              1852.83,
-              652.67
+              1888.83,
+              712.67
             ],
             "rotation": 0,
             "text": "State: article {},",
@@ -4772,8 +4772,8 @@
             "parentId": "2b7b23e7-ee12-4a30-0741-0292f7e6a3e6",
             "childIndex": 6,
             "point": [
-              1629.83,
-              803.67
+              1665.83,
+              863.67
             ],
             "size": [
               217,
@@ -4801,8 +4801,8 @@
             "parentId": "2b7b23e7-ee12-4a30-0741-0292f7e6a3e6",
             "childIndex": 68,
             "point": [
-              1673.33,
-              817.17
+              1709.33,
+              877.17
             ],
             "rotation": 0,
             "text": "ArticleCard",
@@ -4823,8 +4823,8 @@
             "parentId": "2b7b23e7-ee12-4a30-0741-0292f7e6a3e6",
             "childIndex": 69,
             "point": [
-              1857.16,
-              809.5
+              1893.16,
+              869.5
             ],
             "rotation": 0,
             "text": "Props: article{}",
@@ -4845,8 +4845,8 @@
             "parentId": "2b7b23e7-ee12-4a30-0741-0292f7e6a3e6",
             "childIndex": 70,
             "point": [
-              1733.54,
-              709.67
+              1769.54,
+              769.67
             ],
             "rotation": 0,
             "bend": 0,
