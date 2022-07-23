@@ -14,7 +14,6 @@ const Nav = () => {
     }, [])
 
     return (
-        <>
         <nav className="navbar">
             <ul className="links-list">
                 <li><Link to="/">Home</Link></li>
@@ -28,7 +27,6 @@ const Nav = () => {
                 })}
             </ul>
         </nav>
-        </>
     )
 }
 

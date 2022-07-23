@@ -23,8 +23,10 @@ h1 {
 .navbar {
   display: flex;
   justify-content: center;
+  align-items: center;
   border: 5px solid limegreen;
   padding: none;
+  height: 10vh;
 }
 
 .links-list {
@@ -46,13 +48,14 @@ h1 {
   margin: 0 auto;
   padding: 0;
   list-style-type: none;
-  column-gap: 2rem;  
+  column-gap: 4rem;
+  row-gap: 2rem; 
 }
 
 .summarycard {
   border: 1px solid black;
-  max-width: 650px;
-  min-width: 320px;
+  max-width: 700px;
+  width: 95%;
   margin: 1.5rem auto;
   padding: 1rem;
   border-radius: 10px;
