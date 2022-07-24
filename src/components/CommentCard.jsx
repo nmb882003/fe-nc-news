@@ -3,8 +3,9 @@ const CommentCard = ({comment}) => {
 
     return (
         <div>
-            <p>{comment.author} commented on {date} @ {time.slice(0, 8)} :</p>
+            <p>{comment.author} commented:</p>
             <p>"{comment.body}"</p>
+            <p>Posted on {date} @ {time.slice(0, 8)}</p>
         </div>
     )
 }
