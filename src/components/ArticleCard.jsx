@@ -19,7 +19,7 @@ const ArticleCard = ({ article, showComments, setShowComments }) => {
 
     return (
         <article className="articlecard">
-            <h3 className="card-header">{article.title}</h3>
+            <h2 className="articlecard-header">{article.title}</h2>
             <p>{article.body}</p>
             <p>Found in topic: {article.topic}</p>
             <p>{article.comment_count} comments</p>
