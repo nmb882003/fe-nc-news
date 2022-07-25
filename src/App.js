@@ -10,15 +10,15 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
-          <Header />
-          <Nav />
-          <div className="gen-container">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/articles" element={<SummaryList />} />
-          <Route path="/topics/:topic/articles" element={<SummaryList />} />
-          <Route path="/articles/:article_id" element={<Article />} />
-        </Routes>
+        <Header />
+        <Nav />
+        <div className="gen-container">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/articles" element={<SummaryList />} />
+            <Route path="/topics/:topic/articles" element={<SummaryList />} />
+            <Route path="/articles/:article_id" element={<Article />} />
+          </Routes>
         </div>
       </div>
     </BrowserRouter>
