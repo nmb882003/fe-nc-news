@@ -12,9 +12,9 @@ function App() {
       <div className="App">
         <Header />
         <Nav />
-        <div className="gen-container">
+        <div className="main-container">
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route exact path="/" element={<Home />} />
             <Route path="/articles" element={<SummaryList />} />
             <Route path="/topics/:topic/articles" element={<SummaryList />} />
             <Route path="/articles/:article_id" element={<Article />} />

@@ -16,8 +16,8 @@ const Nav = () => {
     return (
         <nav className="navbar">
             <ul className="links-list">
-                <li><Link to="/">Home</Link></li>
-                <li><Link to="/articles">View all articles</Link></li>
+                <li><Link className="link" to="/">Home</Link></li>
+                <li><Link className="link" to="/articles">View all articles</Link></li>
                 {topics.map(item => {
                     return (
                         <li key={item.slug}>

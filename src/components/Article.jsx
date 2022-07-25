@@ -30,13 +30,14 @@ const Article = () => {
 
     return (
         <>
-
             <p>Posted by user {article.author} on {article.created_at.split("T")[0]} at {article.created_at.split("T")[1].slice(0, 8)}:</p>
             <div className="articlecard-container">
                 <ArticleCard article={article} showComments={showComments} setShowComments={setShowComments} />
                 <button className="back-button" onClick={() => goBack()}>Go Back</button>
             </div>
-            <CommentsList article_id={article.article_id} showComments={showComments} />
+            <div className="commentslist-container">
+                <CommentsList article_id={article.article_id} showComments={showComments} />
+            </div>
         </>
     )
 }
