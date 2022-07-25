@@ -7,9 +7,11 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 15vh 10vh 75vh; 
+  grid-template-areas: "header" "navbar" "main";
 }
 
 .header {
+  grid-area: header;
   display: flex;
   border: 3px solid black;
   justify-content: center;
@@ -17,6 +19,7 @@
 }
 
 .navbar {
+  grid-area: navbar;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -25,11 +28,12 @@
 }
 
 .gen-container {
+  grid-area: main;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
-  border: 3px solid blue;
+  border: 2px solid blue;
   overflow-y: scroll;
 }
 
@@ -77,7 +81,7 @@ p {
 }
 
 .summarycard {
-  width: 80%;
+  width: 95%;
   max-width: 550px;
   border: 1px solid black;
   padding: 0.5rem 1.5rem;
@@ -92,9 +96,9 @@ p {
   margin: 0.75rem 0;
 }
 
-.articlecard-heading {
-  font-size: 1.75rem;
-  margin: 0.5rem 0;
+.articlecard-container {
+  max-width: 900px;
+  margin: 1rem auto;
 }
 
 .articlecard {
@@ -108,9 +112,9 @@ p {
   box-shadow: 2px 5px 15px black;
 }
 
-.articlecard-container {
-  max-width: 900px;
-  margin: 1rem auto;
+.articlecard-heading {
+  font-size: 1.75rem;
+  margin: 0.5rem 0;
 }
 
 .commentslist-container {
@@ -138,4 +142,22 @@ p {
 .back-button {
   display: block;
   margin: 0 auto;
+}
+
+@media screen and (min-width: 650px) {
+  .App {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 15vw 85vw;
+    grid-template-rows: 15vh 85vh;
+    grid-template-areas: "header header" "navbar main";
+  }
+
+  .summarycard-heading {
+    font-size: 2rem;
+    margin: 0.75rem 0;
+  }
+
+
+
 }
