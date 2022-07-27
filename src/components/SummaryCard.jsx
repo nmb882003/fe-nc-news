@@ -15,8 +15,8 @@ const SummaryCard = ({ summary }) => {
                 <p>{summary.topic}</p>
             </div>
             <div className="summarycard-body">
-                <p>Comments: {summary.comment_count}</p>
-                <p>Votes: {summary.votes}</p>
+                <p>{summary.created_at}</p>
+                <p>c: {summary.comment_count} v: {summary.votes}</p>
             </div>
             <button onClick={() => goFullArticle()}>Click here to read full article!</button>
         </>

@@ -98,6 +98,7 @@ p {
 .summarycard-body {
   display: flex;
   justify-content: space-between;
+  margin: 0 1rem;
 }
 
 .articlecard {
@@ -116,9 +117,9 @@ p {
   margin: 0.5rem 0;
 }
 
-.articlecard-container {
+.article-container {
   margin: 1rem auto;
-  background-color: yellow;
+  border: 2px solid orange;
 }
 .commentslist {
   margin: 1rem auto;
@@ -204,11 +205,7 @@ p {
     column-gap: 1.5rem;
   }
 
-  .commentslist-container {
-    background-color: aqua;
-  }
-
-  .articlecard-container {
+  .article-container {
     background-color: yellow;
   }
 }

@@ -28,14 +28,13 @@ const Article = () => {
         return <p>Please wait while we fetch your article...</p>
     }
 
+    // <p>Posted by user {article.author} on {article.created_at.split("T")[0]} at {article.created_at.split("T")[1].slice(0, 8)}:</p>
+
     return (
         <>
-            <p>Posted by user {article.author} on {article.created_at.split("T")[0]} at {article.created_at.split("T")[1].slice(0, 8)}:</p>
-            <div className="articlecard-container">
+            <div className="article-container">
                 <ArticleCard article={article} showComments={showComments} setShowComments={setShowComments} />
                 <button className="back-button" onClick={() => goBack()}>Go Back</button>
-            </div>
-            <div className="commentslist-container">
                 <CommentsList article_id={article.article_id} showComments={showComments} />
             </div>
         </>

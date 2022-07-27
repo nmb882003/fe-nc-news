@@ -16,6 +16,7 @@ const SummaryList = () => {
             path += `?topic=${topic}`;
         }
 
+        setIsLoading(true);
         fetch(path)
 
             .then(res => res.json())
