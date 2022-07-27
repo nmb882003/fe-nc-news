@@ -102,9 +102,10 @@ p {
 }
 
 .articlecard {
-  width: 95%;
+  width: 100%;
+  max-width: 800px;
   text-align: left;
-  margin: 1rem auto;
+  margin: 0 auto;
   border: 1px solid black;
   padding: 1rem 1.5rem;
   border-radius: 10px;
@@ -120,6 +121,7 @@ p {
 .article-container {
   margin: 1rem auto;
   border: 2px solid orange;
+  width: 95%;
 }
 .commentslist {
   margin: 1rem auto;
@@ -128,7 +130,7 @@ p {
 }
 
 .commentcard {
-  width: 90%;
+  width: 95%;
   margin: 1.25rem auto;
   padding: 0.25rem 0.5rem;
   text-align: left;
@@ -147,7 +149,8 @@ p {
 
 .back-button {
   display: block;
-  margin: 0 auto;
+  margin: 1.5rem auto;
+
 }
 
 @media screen and (min-width: 650px) {
@@ -206,6 +209,6 @@ p {
   }
 
   .article-container {
-    background-color: yellow;
+    
   }
 }

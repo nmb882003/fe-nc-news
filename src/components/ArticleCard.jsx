@@ -3,7 +3,7 @@ import VoteButton from './VoteButton.jsx';
 
 const ArticleCard = ({ article, showComments, setShowComments }) => {
     const [userVotes, setUserVotes] = useState(0);
-    const [buttonLabel, setButtonLabel] = useState("Show all comments");
+    const [buttonLabel, setButtonLabel] = useState("Show comments");
 
     const showCommentsList = (showComments) => {
         if (showComments) {
@@ -14,7 +14,7 @@ const ArticleCard = ({ article, showComments, setShowComments }) => {
     };
 
     const updateButtonLabel = () => {
-        (buttonLabel === "Show all comments") ? setButtonLabel("Hide all comments") : setButtonLabel("Show all comments");
+        (buttonLabel === "Show comments") ? setButtonLabel("Hide comments") : setButtonLabel("Show comments");
     }
 
     return (
@@ -28,7 +28,7 @@ const ArticleCard = ({ article, showComments, setShowComments }) => {
             <button onClick={() => {
                 showCommentsList(showComments)
                 updateButtonLabel()
-            }}>{buttonLabel} &#40;{article.comment_count}&#41;</button>
+            }}>{buttonLabel}</button>
         </article>
     )
 }
