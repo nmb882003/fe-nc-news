@@ -9,7 +9,6 @@ const Article = () => {
     const [showComments, setShowComments] = useState(false);
 
     const { article_id } = useParams();
-
     const navigate = useNavigate();
 
     const goBack = () => navigate(-1);
@@ -31,13 +30,15 @@ const Article = () => {
     // <p>Posted by user {article.author} on {article.created_at.split("T")[0]} at {article.created_at.split("T")[1].slice(0, 8)}:</p>
 
     return (
-        <>
-            <div className="article-container">
+        <div className="article-container">
+            <div className="articlecard-container">
                 <ArticleCard article={article} showComments={showComments} setShowComments={setShowComments} />
                 <button className="back-button" onClick={() => goBack()}>Go Back</button>
-                <CommentsList article_id={article.article_id} showComments={showComments} />
             </div>
-        </>
+            {showComments === true && <div className="comments-container">
+                <CommentsList article_id={article.article_id} />
+            </div>}
+        </div>
     )
 }
 

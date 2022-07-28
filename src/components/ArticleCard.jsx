@@ -18,18 +18,18 @@ const ArticleCard = ({ article, showComments, setShowComments }) => {
     }
 
     return (
-        <article className="articlecard">
-            <h2 className="articlecard-heading">{article.title}</h2>
-            <p>{article.body}</p>
-            <p>Found in topic: {article.topic}</p>
-            <p>{article.comment_count} comments</p>
-            <p>{article.votes + userVotes} votes</p>
-            <VoteButton article={article} setUserVotes={setUserVotes} />
-            <button onClick={() => {
-                showCommentsList(showComments)
-                updateButtonLabel()
-            }}>{buttonLabel}</button>
-        </article>
+            <article className="articlecard">
+                <h2 className="articlecard-heading">{article.title}</h2>
+                <p>{article.body}</p>
+                <p>Found in topic: {article.topic}</p>
+                <p>{article.comment_count} comments</p>
+                <p>{article.votes + userVotes} votes</p>
+                <VoteButton article={article} setUserVotes={setUserVotes} />
+                <button onClick={() => {
+                    showCommentsList(showComments)
+                    updateButtonLabel()
+                }}>{buttonLabel}</button>
+            </article>
     )
 }
 

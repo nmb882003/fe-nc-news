@@ -1,7 +1,7 @@
 import CommentCard from "./CommentCard.jsx";
 import { useEffect, useState } from 'react';
 
-const CommentsList = (({ article_id, showComments }) => {
+const CommentsList = (({ article_id }) => {
     const [comments, setComments] = useState([]);
 
     useEffect(() => {
@@ -13,19 +13,17 @@ const CommentsList = (({ article_id, showComments }) => {
             })
     }, [])
 
-    if (showComments) {
-        return (
-            <ul className="commentslist">
-                {comments.map(comment => {
-                    return (
-                        <li className="commentcard" key={comment.comment_id}>
-                            <CommentCard comment={comment}/>
-                        </li>
-                    )
-                })}
-            </ul>
-        )
-    }
+    return (
+        <ul className="commentslist">
+            {comments.map(comment => {
+                return (
+                    <li className="commentcard" key={comment.comment_id}>
+                        <CommentCard comment={comment} />
+                    </li>
+                )
+            })}
+        </ul>
+    )
 })
 
 export default CommentsList;

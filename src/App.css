@@ -6,8 +6,8 @@
   text-align: center;
   display: grid;
   grid-template-columns: 100vw;
-  grid-template-rows: 12vh 10vh 78vh; 
-  grid-template-areas: "header" "navbar" "main";
+  grid-template-rows: 12vh 10vh 78vh;
+  grid-template-areas: "header""navbar""main";
 }
 
 h1 {
@@ -101,15 +101,23 @@ p {
   margin: 0 1rem;
 }
 
+.article-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 1rem auto;
+  border: 2px solid orange;
+  width: 95%;
+}
+
 .articlecard {
   width: 100%;
-  max-width: 800px;
+  max-width: 850px;
   text-align: left;
-  margin: 0 auto;
+  margin: 1rem auto;
   border: 1px solid black;
   padding: 0.5rem 1.5rem;
   border-radius: 10px;
-  box-sizing: border-box;
   box-shadow: 2px 5px 15px black;
 }
 
@@ -118,13 +126,8 @@ p {
   margin: 0.5rem 0;
 }
 
-.article-container {
-  margin: 1rem auto;
-  border: 2px solid orange;
-  width: 95%;
-}
 .commentslist {
-  margin: 1rem auto;
+  margin: 0 auto;
   list-style-type: none;
   padding: 0;
 }
@@ -136,20 +139,16 @@ p {
   text-align: left;
   border: 1px solid black;
   border-radius: 10px;
+  box-shadow: 2px 5px 15px black;
 }
 
 .commentcard p {
   font-size: 1rem;
 }
 
-.commentslist-container {
-  margin: 1rem auto;
-  background-color: aqua;
-}
-
 .back-button {
   display: block;
-  margin: 1.5rem auto;
+  margin: 3rem auto;
 
 }
 
@@ -174,7 +173,7 @@ p {
   .App {
     grid-template-columns: 15vw 85vw;
     grid-template-rows: 15vh 85vh;
-    grid-template-areas: "header header" "navbar main";
+    grid-template-areas: "header header""navbar main";
   }
 
   h1 {
@@ -214,11 +213,24 @@ p {
   }
 
   .article-container {
-    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 1rem auto;
+    border: 2px solid orange;
+    width: 95%;
+  }
+
+  .articlecard-container {
+    width: 55%;
   }
 
   .articlecard-heading {
     font-size: 2.25rem;
     margin: 1rem 0;
+  }
+  
+  .comments-container {
+    width: 35%;
   }
 }
