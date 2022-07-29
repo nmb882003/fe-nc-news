@@ -65,7 +65,6 @@ p {
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
-  border: 2px solid blue;
   overflow-y: scroll;
 }
 
@@ -130,7 +129,7 @@ p {
 
 .articlecard-heading {
   font-size: 1.5rem;
-  margin: 0.5rem 0;
+  margin: 0.75rem 0;
 }
 
 .articlecard-details {
@@ -236,7 +235,7 @@ p {
     align-items: baseline;
     width: 98%;
     padding: 0;
-    margin: 1rem 0;
+    margin: 2rem 0;
     column-gap: 2rem;
     row-gap: 2rem;
   }
@@ -249,7 +248,7 @@ p {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    margin: 1rem auto;
+    margin: 2rem auto;
     width: 95%;
   }
 
