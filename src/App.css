@@ -18,7 +18,7 @@ h1 {
 button {
   font-size: 1.25rem;
   padding: 0.25rem 0.5rem;
-  margin: 0.5rem 0;
+  margin: 0;
 }
 
 p {
@@ -69,6 +69,10 @@ p {
   overflow-y: scroll;
 }
 
+.home-body {
+  align-self: center;
+}
+
 .summarylist {
   display: flex;
   flex-direction: column;
@@ -76,7 +80,7 @@ p {
   padding: 0;
   margin: 1rem 0;
   list-style-type: none;
-  border: 2px solid black;
+  row-gap: 1.5rem;
 }
 
 .summarycard {
@@ -87,7 +91,6 @@ p {
   text-align: left;
   border-radius: 10px;
   box-shadow: 2px 5px 15px black;
-  margin: 0.75rem 0;
 }
 
 .summarycard-heading {
@@ -98,7 +101,7 @@ p {
 .summarycard-body {
   display: flex;
   justify-content: space-between;
-  margin: 0 1rem;
+  margin: 0;
 }
 
 .article-container {
@@ -106,13 +109,12 @@ p {
   flex-direction: column;
   justify-content: flex-start;
   margin: 1rem auto;
-  border: 2px solid orange;
   width: 95%;
 }
 
 .articlecard {
   width: 100%;
-  max-width: 850px;
+  max-width: 800px;
   text-align: left;
   margin: 1rem auto;
   border: 1px solid black;
@@ -124,6 +126,18 @@ p {
 .articlecard-heading {
   font-size: 1.75rem;
   margin: 0.5rem 0;
+}
+
+.articlecard-vote-buttons-container {
+  width: 50%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.articlecard-comment-buttons-container {
+  width: 80%;
+  display: flex;
+  justify-content: flex-start;
 }
 
 .commentslist {
@@ -148,8 +162,7 @@ p {
 
 .back-button {
   display: block;
-  margin: 3rem auto;
-
+  margin: 2.5rem auto;
 }
 
 @media screen and (min-width: 650px) {
@@ -204,12 +217,12 @@ p {
     flex-wrap: wrap;
     justify-content: space-around;
     align-content: flex-start;
-    align-items: center;
+    align-items: baseline;
     width: 98%;
     padding: 0;
     margin: 1rem 0;
-    border: 2px solid black;
-    column-gap: 1.5rem;
+    column-gap: 2rem;
+    row-gap: 2rem;
   }
 
   .article-container {
@@ -217,7 +230,6 @@ p {
     flex-direction: row;
     justify-content: space-around;
     margin: 1rem auto;
-    border: 2px solid orange;
     width: 95%;
   }
 
@@ -227,10 +239,10 @@ p {
 
   .articlecard-heading {
     font-size: 2.25rem;
-    margin: 1rem 0;
+    margin: 0.75rem 0;
   }
   
   .comments-container {
-    width: 35%;
+    width: 40%;
   }
 }

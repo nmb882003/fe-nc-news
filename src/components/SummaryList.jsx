@@ -1,12 +1,18 @@
 import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import SummaryCard from './SummaryCard.jsx';
 
 const SummaryList = () => {
     const [summaryList, setSummaryList] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
 
+    const navigate = useNavigate();
+
     const { topic } = useParams();
+
+    const goFullArticle = (summary) => {
+        navigate(`/articles/${summary.article_id}`);
+    }
 
     useEffect(() => {
 
@@ -20,7 +26,7 @@ const SummaryList = () => {
         fetch(path)
 
             .then(res => res.json())
-            
+
             .then(({ articles }) => {
                 setSummaryList(articles);
                 setIsLoading(false);
@@ -37,7 +43,7 @@ const SummaryList = () => {
         <ul className="summarylist">
             {summaryList.map(summary => {
                 return (
-                    <li key={summary.article_id} className="summarycard">
+                    <li key={summary.article_id} className="summarycard" onClick={() => goFullArticle(summary)}>
                         <SummaryCard summary={summary} />
                     </li>
                 )

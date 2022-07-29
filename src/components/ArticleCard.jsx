@@ -18,18 +18,23 @@ const ArticleCard = ({ article, showComments, setShowComments }) => {
     }
 
     return (
-            <article className="articlecard">
-                <h2 className="articlecard-heading">{article.title}</h2>
-                <p>{article.body}</p>
-                <p>Found in topic: {article.topic}</p>
-                <p>{article.comment_count} comments</p>
-                <p>{article.votes + userVotes} votes</p>
+        <article className="articlecard">
+            <h2 className="articlecard-heading">{article.title}</h2>
+            <p>{article.body}</p>
+            <p>Posted by {article.author} on {article.created_at}</p>
+            <p>In topic '{article.topic}'</p>
+            <p>{article.votes + userVotes} votes {article.comment_count} comments</p>
+            <div className="articlecard-vote-buttons-container">
                 <VoteButton article={article} setUserVotes={setUserVotes} />
+            </div>
+            <div className="articlecard-comment-buttons-container">
                 <button onClick={() => {
-                    showCommentsList(showComments)
-                    updateButtonLabel()
+                    showCommentsList(showComments);
+                    updateButtonLabel();
                 }}>{buttonLabel}</button>
-            </article>
+                <button onClick={() => { }}>Add a comment</button>
+            </div>
+        </article>
     )
 }
 
