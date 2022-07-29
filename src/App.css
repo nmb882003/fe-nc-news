@@ -128,16 +128,14 @@ p {
   margin: 0.5rem 0;
 }
 
-.articlecard-vote-buttons-container {
-  width: 50%;
-  display: flex;
-  justify-content: flex-start;
+.articlecard-details {
+  margin: 1rem 0;
 }
 
-.articlecard-comment-buttons-container {
-  width: 80%;
+.articlecard-buttons-container {
   display: flex;
   justify-content: flex-start;
+  margin: 0.5rem 0;
 }
 
 .commentslist {

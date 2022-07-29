@@ -20,14 +20,18 @@ const ArticleCard = ({ article, showComments, setShowComments }) => {
     return (
         <article className="articlecard">
             <h2 className="articlecard-heading">{article.title}</h2>
-            <p>{article.body}</p>
-            <p>Posted by {article.author} on {article.created_at}</p>
-            <p>In topic '{article.topic}'</p>
-            <p>{article.votes + userVotes} votes {article.comment_count} comments</p>
-            <div className="articlecard-vote-buttons-container">
+            <div className="articlecard-body">
+                <p>{article.body}</p>
+            </div>
+            <div className="articlecard-details">
+                <p>Posted by {article.author} on {article.created_at}</p>
+                <p>In topic '{article.topic}'</p>
+                <p>{article.votes + userVotes} votes {article.comment_count} comments</p>
+            </div>
+            <div className="articlecard-buttons-container">
                 <VoteButton article={article} setUserVotes={setUserVotes} />
             </div>
-            <div className="articlecard-comment-buttons-container">
+            <div className="articlecard-buttons-container">
                 <button onClick={() => {
                     showCommentsList(showComments);
                     updateButtonLabel();
