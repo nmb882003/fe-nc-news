@@ -98,9 +98,9 @@ p {
   margin: 0.5rem 0;
 }
 
-.summarycard-body {
-  display: flex;
-  justify-content: space-between;
+.summarycard-details {
+  display: inline-block;
+  width: 50%;
   margin: 0;
 }
 
