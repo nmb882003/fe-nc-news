@@ -24,8 +24,7 @@ const ArticleCard = ({ article, showComments, setShowComments }) => {
                 <p>{article.body}</p>
             </div>
             <div className="articlecard-details">
-                <p>Posted by {article.author} on {article.created_at}</p>
-                <p>In topic '{article.topic}'</p>
+                <p>Posted by user {article.author} in topic '{article.topic}' at {article.created_at}</p>
                 <p>{article.votes + userVotes} votes {article.comment_count} comments</p>
             </div>
             <div className="articlecard-buttons-container">

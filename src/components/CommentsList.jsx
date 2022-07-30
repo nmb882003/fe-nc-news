@@ -1,5 +1,5 @@
-import CommentCard from "./CommentCard.jsx";
 import { useEffect, useState } from 'react';
+import CommentCard from "./CommentCard.jsx";
 
 const CommentsList = (({ article_id }) => {
     const [comments, setComments] = useState([]);
@@ -11,7 +11,7 @@ const CommentsList = (({ article_id }) => {
             .then(({ comments }) => {
                 setComments(comments);
             })
-    }, [])
+    }, [article_id])
 
     return (
         <ul className="commentslist">

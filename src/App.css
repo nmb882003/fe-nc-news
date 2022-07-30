@@ -70,6 +70,7 @@ p {
 
 .home-body {
   align-self: center;
+  font-size: 2rem;
 }
 
 .summarylist {
@@ -118,7 +119,7 @@ p {
 
 .articlecard {
   width: 100%;
-  max-width: 800px;
+  max-width: 820px;
   text-align: left;
   margin: 0 auto;
   border: 1px solid black;
@@ -206,7 +207,7 @@ p {
   }
 }
 
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 1280px) {
   .App {
     grid-template-columns: 15vw 85vw;
     grid-template-rows: 15vh 85vh;
@@ -246,15 +247,15 @@ p {
     justify-content: space-around;
     align-content: flex-start;
     align-items: baseline;
-    width: 98%;
+    width: 95%;
     padding: 0;
     margin: 2rem 0;
-    column-gap: 2rem;
+    column-gap: 2.5rem;
     row-gap: 2rem;
   }
 
   .summarycard {
-    max-width: 450px;
+    max-width: 480px;
   }
 
   .article-container {
