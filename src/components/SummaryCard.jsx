@@ -1,3 +1,5 @@
+import { formatDateAndTime } from "../utils/helper.js";
+
 const SummaryCard = ({ summary }) => {
 
     return (
@@ -8,7 +10,7 @@ const SummaryCard = ({ summary }) => {
                 <p>c {summary.comment_count} v {summary.votes}</p>
             </div>
             <div className="summarycard-details">
-                <p>{summary.created_at}</p>
+                <p>{formatDateAndTime(summary.created_at)}</p>
                 <p>{summary.topic}</p>
             </div>
         </>

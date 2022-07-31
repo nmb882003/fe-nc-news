@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { formatDateAndTime } from '../utils/helper.js';
 import VoteButton from './VoteButton.jsx';
 
 const ArticleCard = ({ article, showComments, setShowComments }) => {
@@ -21,7 +22,7 @@ const ArticleCard = ({ article, showComments, setShowComments }) => {
         <article className="articlecard">
             <h2 className="articlecard-heading">{article.title}</h2>
             <div className="articlecard-details">
-                <p>Posted by user {article.author} in topic '{article.topic}' at {article.created_at}</p>
+                <p>Posted {formatDateAndTime(article.created_at)} by user {article.author} in topic '{article.topic}'</p>
             </div>
             <div className="articlecard-body">
                 <p>{article.body}</p>

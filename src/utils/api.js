@@ -5,4 +5,4 @@ const updateArticleVotes = (count, article) => {
       }})
 }
 
-export default updateArticleVotes;
+export { updateArticleVotes }

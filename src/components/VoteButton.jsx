@@ -1,4 +1,4 @@
-import updateArticleVotes from '../utils/api.js';
+import { updateArticleVotes } from '../utils/api.js';
 
 const VoteButton = ({ article, setUserVotes }) => {
 
