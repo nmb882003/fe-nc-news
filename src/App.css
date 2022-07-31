@@ -85,7 +85,7 @@ p {
 
 .summarycard {
   width: 95%;
-  max-width: 650px;
+  max-width: 900px;
   border: 1px solid black;
   padding: 0.25rem 1rem;
   text-align: left;
@@ -94,6 +94,7 @@ p {
 }
 
 .summarycard-heading {
+  font-weight: 500;
   font-size: 1.25rem;
   margin: 0.5rem 0;
 }
@@ -119,7 +120,7 @@ p {
 
 .articlecard {
   width: 100%;
-  max-width: 820px;
+  max-width: 800px;
   text-align: left;
   margin: 0 auto;
   border: 1px solid black;
@@ -134,6 +135,10 @@ p {
 }
 
 .articlecard-details {
+  margin: 1rem 0;
+}
+
+.articlecard-social-details {
   margin: 1rem 0;
 }
 
@@ -154,6 +159,7 @@ p {
 
 .commentcard {
   width: 95%;
+  max-width: 775px;
   margin: 0 auto;
   padding: 0.5rem 1rem;
   text-align: left;
@@ -187,12 +193,21 @@ p {
 
   .articlecard-heading {
     font-size: 1.75rem;
+    font-weight: 600;
     margin: 0.75rem 0;
   }
 
   .articlecard-body p {
     font-size: 1.25rem;
     line-height: 1.5;
+  }
+
+  .articlecard-details {
+    margin: 1rem 0;
+  }
+
+  .articlecard-social-details p {
+    font-size: 1.25rem;
   }
 
   h1 {
@@ -225,7 +240,7 @@ p {
   }
 
   .links-list {
-    margin: 1rem 0;
+    margin: 0.5rem 0;
     flex-direction: column;
     justify-content: flex-start;
     text-align: left;
@@ -251,7 +266,7 @@ p {
     padding: 0;
     margin: 2rem 0;
     column-gap: 2.5rem;
-    row-gap: 2rem;
+    row-gap: 1.5rem;
   }
 
   .summarycard {
@@ -263,7 +278,7 @@ p {
     flex-direction: row;
     justify-content: center;
     column-gap: 2rem;
-    margin: 1.5rem auto;
+    margin: 2rem auto;
     width: 95%;
   }
 
