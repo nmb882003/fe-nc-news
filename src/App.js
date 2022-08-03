@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Home from './components/Home.jsx';
 import Header from './components/Header.jsx';
 import Nav from './components/Nav.jsx';
-import SummaryList from './components/SummaryList'
+import SummaryList from './components/SummaryList.jsx'
 import Article from './components/Article.jsx'
 
 function App() {

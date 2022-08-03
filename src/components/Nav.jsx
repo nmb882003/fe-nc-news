@@ -1,5 +1,6 @@
-import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+
 
 const Nav = () => {
     const [ topics, setTopics ] = useState([]);
