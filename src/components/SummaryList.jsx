@@ -33,26 +33,24 @@ const SummaryList = () => {
             })
     }, [topic])
 
-    if (isLoading) {
-        return (
-            <p>Please wait while article data loads...</p>
-        )
-    }
-
     return (
-        <div className="summaries-container">
-        <p className="sort-bar">Sort bar will go here</p>
-        <p className="pag-bar">And pagination too!</p>
-        <ul className="summarylist">
-            {summaryList.map(summary => {
-                return (
-                    <li key={summary.article_id} className="summarycard" onClick={() => goFullArticle(summary)}>
-                        <SummaryCard summary={summary} />
-                    </li>
-                )
-            })}
-        </ul>
-        </div>
+        <>
+            {isLoading ? <p>Please wait while article data loads... </p> :
+                <div className="summaries-container">
+                    <p className="sort-bar">Sort bar will go here</p>
+                    <p className="pag-bar">And pagination too!</p>
+                    <ul className="summarylist">
+                        {summaryList.map(summary => {
+                            return (
+                                <li key={summary.article_id} className="summarycard" onClick={() => goFullArticle(summary)}>
+                                    <SummaryCard summary={summary} />
+                                </li>
+                            )
+                        })}
+                    </ul>
+                </div>
+            }
+        </>
     )
 }
 

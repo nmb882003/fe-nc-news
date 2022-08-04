@@ -23,22 +23,22 @@ const Article = () => {
             });
     }, [article_id])
 
-    if (isLoading) {
-        return <p>Please wait while we fetch your article...</p>
-    }
-
     // <p>Posted by user {article.author} on {article.created_at.split("T")[0]} at {article.created_at.split("T")[1].slice(0, 8)}:</p>
 
     return (
-        <div className="article-container">
-            <div className="articlecard-container">
-                <ArticleCard article={article} showComments={showComments} setShowComments={setShowComments} />
-                <button className="back-button" onClick={() => goBack()}>Go Back</button>
-            </div>
-            {showComments === true && <div className="comments-container">
-                <CommentsList article_id={article.article_id} />
-            </div>}
-        </div>
+        <>
+            {isLoading ? <p>Please wait while we fetch your article...</p> :
+                <div className="article-container">
+                    <div className="articlecard-container">
+                        <ArticleCard article={article} showComments={showComments} setShowComments={setShowComments} />
+                        <button className="back-button" onClick={() => goBack()}>Go Back</button>
+                    </div>
+                    {showComments === true && <div className="comments-container">
+                        <CommentsList article_id={article.article_id} />
+                    </div>}
+                </div>
+            }
+        </>
     )
 }
 

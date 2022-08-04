@@ -6,14 +6,6 @@ const ArticleCard = ({ article, showComments, setShowComments }) => {
     const [userVotes, setUserVotes] = useState(0);
     const [buttonLabel, setButtonLabel] = useState("Show comments");
 
-    const showCommentsList = (showComments) => {
-        if (showComments) {
-            setShowComments(false);
-        } else {
-            setShowComments(true);
-        }
-    };
-
     const updateButtonLabel = () => {
         (buttonLabel === "Show comments") ? setButtonLabel("Hide comments") : setButtonLabel("Show comments");
     }
@@ -35,10 +27,12 @@ const ArticleCard = ({ article, showComments, setShowComments }) => {
             </div>
             <div className="articlecard-buttons-container">
                 <button onClick={() => {
-                    showCommentsList(showComments);
+                    setShowComments(!showComments);
                     updateButtonLabel();
                 }}>{buttonLabel}</button>
-                <button onClick={() => { }}>Add a comment</button>
+                <button onClick={() => { 
+                    setShowComments(false);
+                }}>Add a comment</button>
             </div>
         </article>
     )
