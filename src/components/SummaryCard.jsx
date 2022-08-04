@@ -7,7 +7,7 @@ const SummaryCard = ({ summary }) => {
             <h2 className="summarycard-heading">{summary.title}</h2>
             <div className="summarycard-details">
                 <p><span className="material-icons">account_circle</span>{summary.author}</p>
-                <p><span className="material-icons">thumb_up</span>{summary.votes}&nbsp;&nbsp;&nbsp;&nbsp;<span className="material-icons">chat_bubble</span>{summary.comment_count}</p>
+                <p><span className="material-icons">thumb_up</span>{summary.votes}&nbsp;&nbsp;<span className="material-icons">chat_bubble</span>{summary.comment_count}</p>
             </div>
             <div className="summarycard-details">
                 <p><span className="material-icons">access_time</span>{formatDateAndTime(summary.created_at)}</p>

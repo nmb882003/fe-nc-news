@@ -143,7 +143,7 @@ p {
   text-align: left;
   margin: 0 auto;
   border: 1px solid black;
-  padding: 0.25rem 1.25rem;
+  padding: 0.25rem 1rem;
   border-radius: 10px;
   box-shadow: 2px 5px 15px black;
 }
@@ -220,12 +220,15 @@ p {
     font-size: 1.25rem;
   }
 
-  .material-icons 
-{ 
-  font-size: 16px;
-  margin-left: 0.5rem;
-  margin-right: 0.5rem; 
-}
+  .articlecard {
+    padding: 0.25rem 1.25rem;
+  }
+
+  .material-icons { 
+    font-size: 16px;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem; 
+  }
 
   h1 {
     font-size: 3rem;
@@ -318,6 +321,10 @@ p {
   .articlecard-heading {
     font-size: 2rem;
     margin: 0.75rem 0;
+  }
+
+  .articlecard {
+    padding: 0.25rem 1.5rem;
   }
   
   .comments-container {
