@@ -40,7 +40,7 @@ const SummaryList = () => {
     }
 
     return (
-        <>
+        <div className="summaries-container">
         <p className="sort-bar">Sort bar will go here</p>
         <p className="pag-bar">And pagination too!</p>
         <ul className="summarylist">
@@ -52,7 +52,7 @@ const SummaryList = () => {
                 )
             })}
         </ul>
-        </>
+        </div>
     )
 }
 
