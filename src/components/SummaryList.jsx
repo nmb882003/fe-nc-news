@@ -15,7 +15,6 @@ const SummaryList = () => {
     }
 
     useEffect(() => {
-
         let path = 'https://neilb-nc-news-server.herokuapp.com/api/articles';
 
         if (topic) {
@@ -38,7 +37,6 @@ const SummaryList = () => {
             {isLoading ? <p>Please wait while article data loads... </p> :
                 <div className="summaries-container">
                     <p className="sort-bar">Sort bar will go here</p>
-                    <p className="pag-bar">And pagination too!</p>
                     <ul className="summarylist">
                         {summaryList.map(summary => {
                             return (

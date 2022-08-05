@@ -18,11 +18,11 @@ const VoteButton = ({ article, setUserVotes }) => {
             })
     }
 
-    return (
-        <>
-            <button onClick={incrementVotes}>👍 Like</button>
-            <button onClick={decrementVotes}>👎 Dislike</button>
-        </>
+    return (   
+            <div className="votebuttons-container">
+                <button onClick={incrementVotes}>👍</button>
+                <button onClick={decrementVotes}>👎</button>
+            </div>
     )
 }
 

@@ -2,11 +2,13 @@ import { useState, useEffect } from "react";
 import { useParams, useNavigate } from 'react-router-dom';
 import ArticleCard from './ArticleCard.jsx';
 import CommentsList from "./CommentsList.jsx";
+import CommentForm from "./CommentForm.jsx";
 
 const Article = () => {
     const [article, setArticle] = useState({});
     const [isLoading, setIsLoading] = useState(true);
     const [showComments, setShowComments] = useState(false);
+    const [showForm, setShowForm] = useState(false);
 
     const { article_id } = useParams();
     const navigate = useNavigate();
@@ -23,18 +25,19 @@ const Article = () => {
             });
     }, [article_id])
 
-    // <p>Posted by user {article.author} on {article.created_at.split("T")[0]} at {article.created_at.split("T")[1].slice(0, 8)}:</p>
-
     return (
         <>
             {isLoading ? <p>Please wait while we fetch your article...</p> :
                 <div className="article-container">
                     <div className="articlecard-container">
-                        <ArticleCard article={article} showComments={showComments} setShowComments={setShowComments} />
+                        <ArticleCard article={article} showComments={showComments} setShowComments={setShowComments} setShowForm={setShowForm}/>
                         <button className="back-button" onClick={() => goBack()}>Go Back</button>
                     </div>
                     {showComments === true && <div className="comments-container">
                         <CommentsList article_id={article.article_id} />
+                    </div>}
+                    {showForm === true && <div className="commentform-container">
+                        <CommentForm />
                     </div>}
                 </div>
             }
