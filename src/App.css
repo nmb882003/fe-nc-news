@@ -130,7 +130,6 @@ p {
 }
 
 .material-icons {
-  vertical-align: text-bottom;
   font-size: 16px;
   margin-left: 0;
   margin-right: 0.5rem; 
@@ -157,7 +156,7 @@ p {
 
 .articlecard-heading {
   font-size: 1.5rem;
-  margin: 1rem 0;
+  margin: 0.75rem 0;
 }
 
 .articlecard-details {
@@ -180,7 +179,7 @@ p {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  margin: 1rem 0;
+  margin: 0.75rem 0;
 }
 
 .votebuttons-container {
@@ -365,7 +364,6 @@ p {
 
   .material-icons { 
     font-size: 20px;
-    margin-right: 0.5rem; 
   }
 
   .article-container {
