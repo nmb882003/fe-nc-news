@@ -38,7 +38,7 @@ const Article = () => {
                         <CommentsList article_id={article.article_id} />
                     </div>}
                     {showForm === true && <div className="commentform-container">
-                        <CommentForm setShowButtons={setShowButtons} setShowForm={setShowForm}/>
+                        <CommentForm setShowButtons={setShowButtons} setShowForm={setShowForm} article_id={article_id}/>
                     </div>}
                 </div>
             }

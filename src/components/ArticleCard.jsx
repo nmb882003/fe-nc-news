@@ -37,8 +37,7 @@ const ArticleCard = ({ article, showComments, setShowComments, setShowForm, show
                     setShowForm(true);
                     setShowButtons(false);
                 }}>Add a comment</button>
-            </div>
-            }
+            </div>}
         </article>
     )
 }
