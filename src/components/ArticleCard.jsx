@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { formatDateAndTime } from '../utils/helper.js';
 import VoteButton from './VoteButton.jsx';
 
-const ArticleCard = ({ article, showComments, setShowComments, setShowForm }) => {
+const ArticleCard = ({ article, showComments, setShowComments, setShowForm, showButtons, setShowButtons }) => {
     const [userVotes, setUserVotes] = useState(0);
     const [buttonLabel, setButtonLabel] = useState("Show comments");
 
@@ -26,7 +26,7 @@ const ArticleCard = ({ article, showComments, setShowComments, setShowForm }) =>
             <div className="articlecard-social-info">
                 <p>{article.votes + userVotes} votes {article.comment_count} comments</p>
             </div>
-            <div className="articlecard-comment-buttons">
+            {showButtons === true && <div className="articlecard-comment-buttons">
                 <button onClick={() => {
                     setShowComments(!showComments);
                     updateButtonLabel();
@@ -35,8 +35,10 @@ const ArticleCard = ({ article, showComments, setShowComments, setShowForm }) =>
                     setShowComments(false);
                     setButtonLabel("Show comments");
                     setShowForm(true);
+                    setShowButtons(false);
                 }}>Add a comment</button>
             </div>
+            }
         </article>
     )
 }

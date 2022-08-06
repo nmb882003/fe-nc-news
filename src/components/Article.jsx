@@ -8,6 +8,7 @@ const Article = () => {
     const [article, setArticle] = useState({});
     const [isLoading, setIsLoading] = useState(true);
     const [showComments, setShowComments] = useState(false);
+    const [showButtons, setShowButtons] = useState(true);
     const [showForm, setShowForm] = useState(false);
 
     const { article_id } = useParams();
@@ -30,14 +31,14 @@ const Article = () => {
             {isLoading ? <p>Please wait while we fetch your article...</p> :
                 <div className="article-container">
                     <div className="articlecard-container">
-                        <ArticleCard article={article} showComments={showComments} setShowComments={setShowComments} setShowForm={setShowForm}/>
+                        <ArticleCard article={article} showComments={showComments} setShowComments={setShowComments} setShowForm={setShowForm} showButtons={showButtons} setShowButtons={setShowButtons}/>
                         <button className="back-button" onClick={() => goBack()}>Go Back</button>
                     </div>
                     {showComments === true && <div className="comments-container">
                         <CommentsList article_id={article.article_id} />
                     </div>}
                     {showForm === true && <div className="commentform-container">
-                        <CommentForm />
+                        <CommentForm setShowButtons={setShowButtons} setShowForm={setShowForm}/>
                     </div>}
                 </div>
             }
