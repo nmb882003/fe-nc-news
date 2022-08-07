@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import SummaryCard from './SummaryCard.jsx';
 import SortBar from './SortBar.jsx';
+import PagBar from './PagBar.jsx';
 
 const SummaryList = () => {
     const [summaryList, setSummaryList] = useState([]);
@@ -47,6 +48,7 @@ const SummaryList = () => {
                             )
                         })}
                     </ul>
+                    <PagBar />
                 </div>
             }
         </>
