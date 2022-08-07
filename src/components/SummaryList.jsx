@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import SummaryCard from './SummaryCard.jsx';
+import SortBar from './SortBar.jsx';
 
 const SummaryList = () => {
     const [summaryList, setSummaryList] = useState([]);
@@ -36,12 +37,7 @@ const SummaryList = () => {
         <>
             {isLoading ? <p>Please wait while article data loads... </p> :
                 <div className="summarylist-container">
-                    <div className="summarylist-sort-bar">
-                        <p>Sort articles by</p>
-                        <button type="button" onClick={() => {}}>Date</button>
-                        <button type="button" onClick={() => {}}>Comment count</button>
-                        <button type="button" onClick={() => {}}>Votes</button>
-                    </div>
+                    <SortBar />
                     <ul className="summarylist">
                         {summaryList.map(summary => {
                             return (
