@@ -1,6 +1,6 @@
 import { formatDateAndTime } from "../utils/helper.js";
 
-const CommentCard = ({comment}) => {
+const CommentCard = ({ comment }) => {
 
     return (
         <>

@@ -301,6 +301,7 @@ p {
   .commentform textarea {
     resize: none;
     font-size: 1.25rem;
+    padding: 0 0.25rem;
   }
 }
 
@@ -319,7 +320,7 @@ p {
   .navbar {
     align-items: flex-start;
     overflow-y: scroll;
-    border-right: 2px solid limegreen;
+    border-right: 1px solid black;
   }
 
   .links-list {

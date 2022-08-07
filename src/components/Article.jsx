@@ -10,6 +10,7 @@ const Article = () => {
     const [showComments, setShowComments] = useState(false);
     const [showButtons, setShowButtons] = useState(true);
     const [showForm, setShowForm] = useState(false);
+    const [numberOfComments, setNumberOfComments] = useState(0);
 
     const { article_id } = useParams();
     const navigate = useNavigate();
@@ -22,9 +23,10 @@ const Article = () => {
             .then(res => res.json())
             .then(({ article }) => {
                 setArticle(article);
+                setNumberOfComments(article.comment_count);
                 setIsLoading(false);
             });
-    }, [article_id])
+    }, [article_id, numberOfComments])
 
     return (
         <>
@@ -38,7 +40,7 @@ const Article = () => {
                         <CommentsList article_id={article.article_id} />
                     </div>}
                     {showForm === true && <div className="commentform-container">
-                        <CommentForm setShowButtons={setShowButtons} setShowForm={setShowForm} article_id={article_id}/>
+                        <CommentForm setShowButtons={setShowButtons} setShowForm={setShowForm} article_id={article_id} setNumberOfComments={setNumberOfComments}/>
                     </div>}
                 </div>
             }
