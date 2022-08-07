@@ -35,8 +35,13 @@ const SummaryList = () => {
     return (
         <>
             {isLoading ? <p>Please wait while article data loads... </p> :
-                <div className="summaries-container">
-                    <p className="sort-bar">Sort bar will go here</p>
+                <div className="summarylist-container">
+                    <div className="summarylist-sort-bar">
+                        <p>Sort articles by</p>
+                        <button type="button" onClick={() => {}}>Date</button>
+                        <button type="button" onClick={() => {}}>Comment count</button>
+                        <button type="button" onClick={() => {}}>Votes</button>
+                    </div>
                     <ul className="summarylist">
                         {summaryList.map(summary => {
                             return (

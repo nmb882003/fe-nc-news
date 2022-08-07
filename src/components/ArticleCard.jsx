@@ -14,7 +14,7 @@ const ArticleCard = ({ article, showComments, setShowComments, setShowForm, show
         <article className="articlecard">
             <h2 className="articlecard-heading">{article.title}</h2>
             <div className="articlecard-details">
-                <p>Posted {formatDateAndTime(article.created_at)} by user {article.author} in topic '{article.topic}'</p>
+                <p>By user {article.author}, created {formatDateAndTime(article.created_at)} in topic '{article.topic}'</p>
             </div>
             <div className="articlecard-body">
                 <p>{article.body}</p>

@@ -11,7 +11,7 @@
 }
 
 h1 {
-  font-size: 2.25rem;
+  font-size: 2.5rem;
   padding-right: 1.5rem;
 }
 
@@ -75,20 +75,38 @@ p {
   font-size: 2rem;
 }
 
-.sort-bar {
+.summarylist-sort-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+
+.summarylist-sort-bar p {
+  margin: 0 1vw;
+  font-size: 1rem;
+}
+
+.summarylist-sort-bar button {
+  margin: 0 0.25rem;
+  padding: 0.25rem 0.5rem;
+}
+
+.summarylist-pag-bar {
   margin: 0;
 }
 
-.pag-bar {
+.summarylist-pag-bar p {
   margin: 0;
 }
 
-.summaries-container {
+.summarylist-container {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   width: 95%;
+  margin: 1rem 0;
+  row-gap: 2rem;
 }
 
 .summarylist {
@@ -96,13 +114,13 @@ p {
   flex-direction: column;
   align-items: center;
   padding: 0;
-  margin: 1rem 0;
+  margin: 0;
   list-style-type: none;
-  row-gap: 1.5rem;
+  row-gap: 1.25rem;
 }
 
 .summarycard {
-  width: 95%;
+  width: 100%;
   max-width: 800px;
   border: 1px solid black;
   padding: 0.25rem 1rem;
@@ -288,6 +306,10 @@ p {
     padding: 0.25rem 1.25rem;
   }
 
+  .summarylist-sort-bar p {
+    font-size: 1.25rem;
+  }
+
   .material-icons { 
     font-size: 16px;
     margin-left: 0.5rem;
@@ -313,7 +335,7 @@ p {
   }
 
   h1 {
-    font-size: 3.5rem;
+    font-size: 3.75rem;
     padding-right: 5rem;
   }
 
@@ -340,6 +362,10 @@ p {
     font-size: 1.25rem;
   }
 
+  .summarylist-container {
+    margin: 1.5rem 0;
+  }
+
   .summarylist {
     flex-direction: row;
     flex-wrap: wrap;
@@ -347,9 +373,8 @@ p {
     align-content: flex-start;
     align-items: baseline;
     padding: 0;
-    margin: 1.5rem 0;
     column-gap: 2.5rem;
-    row-gap: 1.5rem;
+    row-gap: 2.5rem;
   }
 
   .summarycard {
