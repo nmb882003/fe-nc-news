@@ -3,7 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import ArticleCard from './ArticleCard.jsx';
 import CommentsList from './CommentsList.jsx';
 import CommentForm from './CommentForm.jsx';
-import ErrorMessage from './ErrorMessage.jsx';
+import ErrorComponent from './ErrorComponent.jsx';
 
 const Article = () => {
     const [article, setArticle] = useState({});
@@ -20,6 +20,7 @@ const Article = () => {
     const goBack = () => navigate(-1);
 
     useEffect(() => {
+        setError(null);
         fetch(`https://neilb-nc-news-server.herokuapp.com/api/articles/${article_id}`)
 
             .then(res => {
@@ -42,7 +43,7 @@ const Article = () => {
 
     return (
         <>
-            {error ? <ErrorMessage msg={error.msg} code={error.status}/> :
+            {error ? <ErrorComponent msg={error.msg} code={error.status}/> :
                 isLoading ? <p>Please wait while we fetch your article...</p> :
                     <div className="article-container">
                         <div className="articlecard-container">

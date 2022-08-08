@@ -300,6 +300,17 @@ p {
   margin: 2.5rem auto;
 }
 
+.errorcomponent-main {
+  margin: 2rem 0;
+  font-weight: 500;
+  font-size: 1.75rem;
+}
+
+.errorcomponent-details {
+  margin: 2rem 0;
+  font-weight: 400;
+  font-size: 1.5rem;
+}
 @media screen and (min-width: 650px) {
   h1 {
     font-size: 3rem;

@@ -5,7 +5,7 @@ import Header from './components/Header.jsx';
 import Nav from './components/Nav.jsx';
 import SummaryList from './components/SummaryList.jsx';
 import Article from './components/Article.jsx';
-import ErrorMessage from './components/ErrorMessage.jsx';
+import ErrorComponent from './components/ErrorComponent.jsx';
 
 function App() {
 
@@ -20,7 +20,7 @@ function App() {
             <Route path="/articles" element={<SummaryList />} />
             <Route path="/topics/:topic/articles" element={<SummaryList />} />
             <Route path="/articles/:article_id" element={<Article />} />
-            <Route path="*" element={<ErrorMessage msg={"Bad request"} code={400}/>} />
+            <Route path="*" element={<ErrorComponent msg={"Bad request"} code={400}/>} />
           </Routes>
         </div>
       </div>

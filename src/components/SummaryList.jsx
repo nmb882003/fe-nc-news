@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import SummaryCard from './SummaryCard.jsx';
 import SortBar from './SortBar.jsx';
 import PagBar from './PagBar.jsx';
-import ErrorMessage from './ErrorMessage.jsx';
+import ErrorComponent from './ErrorComponent.jsx';
 
 const SummaryList = () => {
     const [summaryList, setSummaryList] = useState([]);
@@ -14,7 +14,7 @@ const SummaryList = () => {
 
     const { topic } = useParams();
 
-    useEffect(() => {
+    useEffect(() => { 
         let path = 'https://neilb-nc-news-server.herokuapp.com/api/articles';
 
         if (topic) {
@@ -23,7 +23,9 @@ const SummaryList = () => {
             path += `?sort_by=${selectedButton}&order=${sortDirection}`;
         }
 
+        setError(null);
         setIsLoading(true);
+        
         fetch(path)
             .then(res => {
                 if (res.ok) {
@@ -45,7 +47,7 @@ const SummaryList = () => {
 
     return (
         <>
-            {error ? <ErrorMessage msg={error.msg} code={error.status} /> :
+            {error ? <ErrorComponent msg={error.msg} code={error.status} /> :
                 isLoading ? <p>Please wait while article data loads... </p> :
                     <div className="summarylist-container">
                         <SortBar sortDirection={sortDirection} setSortDirection={setSortDirection} selectedButton={selectedButton} setSelectedButton={setSelectedButton} />
