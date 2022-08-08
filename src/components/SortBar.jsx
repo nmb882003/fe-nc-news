@@ -6,10 +6,10 @@ const SortBar = ({ sortDirection, setSortDirection, selectedButton, setSelectedB
     return (
         <div className="sortbar-outer">
             <div className="sortbar-inner">
-                <p>Sort articles by</p>
-                <button type="button" className={selectedButton === 'date' ? "sortbar-inner-btn-selected" : "sortbar-inner-btn"} onClick={() => {
-                    selectedButton === 'date' ? updateSortDirection(sortDirection) : setSelectedButton('date');
-                }}>Date {selectedButton === 'date' ? sortDirection === 'asc' ? '🔺' : '🔻' : ''}</button>
+                <p className="sortbar-description">Sort articles by</p>
+                <button type="button" className={selectedButton === 'created_at' ? "sortbar-inner-btn-selected" : "sortbar-inner-btn"} onClick={() => {
+                    selectedButton === 'created_at' ? updateSortDirection(sortDirection) : setSelectedButton('created_at');
+                }}>Date {selectedButton === 'created_at' ? sortDirection === 'asc' ? '🔺' : '🔻' : ''}</button>
                 <button type="button" className={selectedButton === 'comment_count' ? "sortbar-inner-btn-selected" : "sortbar-inner-btn"} onClick={() => {
                     selectedButton === 'comment_count' ? updateSortDirection(sortDirection) : setSelectedButton('comment_count');
                 }}>Comment count {selectedButton === 'comment_count' ? sortDirection === 'asc' ? '🔺' : '🔻' : ''}</button>

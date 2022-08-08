@@ -8,7 +8,7 @@ const SummaryList = () => {
     const [summaryList, setSummaryList] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     const [sortDirection, setSortDirection] = useState("desc");
-    const [selectedButton, setSelectedButton] = useState("date");
+    const [selectedButton, setSelectedButton] = useState("created_at");
 
     const navigate = useNavigate();
 
@@ -22,7 +22,9 @@ const SummaryList = () => {
         let path = 'https://neilb-nc-news-server.herokuapp.com/api/articles';
 
         if (topic) {
-            path += `?topic=${topic}`;
+            path += `?topic=${topic}&sort_by=${selectedButton}&order=${sortDirection}`;
+        } else {
+            path += `?sort_by=${selectedButton}&order=${sortDirection}`;
         }
 
         setIsLoading(true);
@@ -34,7 +36,7 @@ const SummaryList = () => {
                 setSummaryList(articles);
                 setIsLoading(false);
             })
-    }, [topic])
+    }, [topic, sortDirection, selectedButton])
 
     return (
         <>
