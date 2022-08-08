@@ -71,7 +71,7 @@ p {
 }
 
 .home-body {
-  align-self: center;
+  margin: 3rem 0;
   font-size: 1.5rem;
 }
 
@@ -300,17 +300,31 @@ p {
   margin: 2.5rem auto;
 }
 
-.errorcomponent-main {
+.errorcomponent-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+  width: 95%;
   margin: 2rem 0;
+}
+
+.errorcomponent-main {
+  margin: 0;
   font-weight: 500;
-  font-size: 1.75rem;
+  font-size: 1.5rem;
 }
 
 .errorcomponent-details {
-  margin: 2rem 0;
+  margin: 0;
   font-weight: 400;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
+
+.errorcomponent-slogan {
+  font-size: 1.25rem;
+  margin: 0;
+}
+
 @media screen and (min-width: 650px) {
   h1 {
     font-size: 3rem;
