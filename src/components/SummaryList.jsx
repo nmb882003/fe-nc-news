@@ -7,6 +7,8 @@ import PagBar from './PagBar.jsx';
 const SummaryList = () => {
     const [summaryList, setSummaryList] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
+    const [sortDirection, setSortDirection] = useState("desc");
+    const [selectedButton, setSelectedButton] = useState("date");
 
     const navigate = useNavigate();
 
@@ -38,7 +40,7 @@ const SummaryList = () => {
         <>
             {isLoading ? <p>Please wait while article data loads... </p> :
                 <div className="summarylist-container">
-                    <SortBar />
+                    <SortBar sortDirection={sortDirection} setSortDirection={setSortDirection} selectedButton={selectedButton} setSelectedButton={setSelectedButton}/>
                     <ul className="summarylist">
                         {summaryList.map(summary => {
                             return (

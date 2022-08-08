@@ -87,7 +87,7 @@ p {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: baseline;
+  align-items: center;
   margin: 0.5rem 0;
 }
 
@@ -96,9 +96,15 @@ p {
   font-size: 1rem;
 }
 
-.sortbar-inner button {
+.sortbar-inner-btn {
+  background-color: rgb(233, 233, 237);
   margin: 0 0.25rem;
   padding: 0.25rem 0.5rem;
+  vertical-align: sub;
+}
+
+.sortbar-inner-btn-selected {
+  background-color: rgb(180, 180, 183);
 }
 
 .pagbar {
@@ -259,6 +265,7 @@ p {
   font-size: 1rem;
   font-family: inherit;
   line-height: 1.4;
+  border-radius: 5px;
 }
 
 .commentform-buttons {
