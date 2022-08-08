@@ -21,6 +21,7 @@ const Article = () => {
         fetch(`https://neilb-nc-news-server.herokuapp.com/api/articles/${article_id}`)
 
             .then(res => res.json())
+            
             .then(({ article }) => {
                 setArticle(article);
                 setNumberOfComments(article.comment_count);
