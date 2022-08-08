@@ -37,7 +37,7 @@ const Article = () => {
                         <button className="back-button" onClick={() => goBack()}>Go Back</button>
                     </div>
                     {showComments === true && <div className="comments-container">
-                        <CommentsList article_id={article.article_id} />
+                        <CommentsList article_id={article.article_id} setNumberOfComments={setNumberOfComments}/>
                     </div>}
                     {showForm === true && <div className="commentform-container">
                         <CommentForm setShowButtons={setShowButtons} setShowForm={setShowForm} article_id={article_id} setNumberOfComments={setNumberOfComments}/>
