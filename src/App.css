@@ -144,13 +144,13 @@ p {
   text-align: left;
   border-radius: 10px;
   box-shadow: 2px 5px 15px black;
-  cursor: pointer;
 }
 
 .summarycard-heading {
   font-weight: 600;
   font-size: 1.25rem;
   margin: 0.5rem 0;
+  cursor: pointer;
 }
 
 .summarycard-details {
@@ -232,10 +232,13 @@ p {
 }
 
 .commentcard {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.75rem;
   width: 95%;
   max-width: 800px;
   margin: 0 auto;
-  padding: 0.5rem 1rem;
+  padding: 0.75rem 1rem;
   text-align: left;
   border: 1px solid black;
   border-radius: 10px;
@@ -244,6 +247,21 @@ p {
 
 .commentcard p {
   font-size: 1rem;
+  margin: 0;
+}
+
+.commentcard-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.commentcard-button {
+  font-size: 1rem;
+}
+
+.bold {
+  font-weight: 600;
 }
 
 .commentform {
