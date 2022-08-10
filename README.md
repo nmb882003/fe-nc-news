@@ -21,19 +21,19 @@ Start by cloning the repository to your local hard drive using the URL of this r
 ```
 $ git clone https://github.com/nmb882003/fe-nc-news
 ```
-Once this is complete, `cd` into the root directory of the project and then enter:
+Once this is complete, `cd` into the root directory of the project and install all necessary dependencies:
 ```
 $ cd fe-nc-news
 
 $ npm i
 ```
-This will install all required dependencies, which may take a few moments. Once complete, you can launch the app using:
+This may take a few moments. Once complete, you can launch the app using:
 ```
 $ npm start
 ```
 
 ## Requirements
 
-To run the app locally you will need to have at least v17.8 of `node` installed. 
+To run the app locally you will need to have `node v17.8` or higher installed. 
 
 Enjoy!
