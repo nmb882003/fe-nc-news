@@ -23,7 +23,6 @@ const SummaryList = () => {
             path += `?sort_by=${selectedButton}&order=${sortDirection}`;
         }
 
-        setError(null);
         setIsLoading(true);
         
         fetch(path)

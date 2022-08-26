@@ -20,7 +20,6 @@ const Article = () => {
     const goBack = () => navigate(-1);
 
     useEffect(() => {
-        setError(null);
         fetch(`https://neilb-nc-news-server.herokuapp.com/api/articles/${article_id}`)
 
             .then(res => {
