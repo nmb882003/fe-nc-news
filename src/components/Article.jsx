@@ -40,11 +40,11 @@ const Article = () => {
         <>
             {error ? <ErrorComponent msg={error.msg} code={error.status} /> :
                 isLoading ? (
-                    <>
+                    <div>
                         <div></div>
                         <p className="article-loading">Please wait while we fetch your article...</p>
-                    </>
-                ) :
+                    </div>
+                ) : (
                     <div className="article-container">
                         <div className="articlecard-container">
                             <ArticleCard article={article} showComments={showComments} setShowComments={setShowComments} setShowForm={setShowForm} showButtons={showButtons} setShowButtons={setShowButtons} />
@@ -57,6 +57,7 @@ const Article = () => {
                             <CommentForm setShowButtons={setShowButtons} setShowForm={setShowForm} article_id={article_id} setNumberOfComments={setNumberOfComments} />
                         </div>}
                     </div>
+                )
             }
         </>
     )
