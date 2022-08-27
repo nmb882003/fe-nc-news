@@ -4,6 +4,7 @@ import ArticleCard from './ArticleCard.jsx';
 import CommentsList from './CommentsList.jsx';
 import CommentForm from './CommentForm.jsx';
 import ErrorComponent from './ErrorComponent.jsx';
+import { getArticle } from '../utils/api.js';
 
 const Article = () => {
     const [article, setArticle] = useState({});
@@ -20,7 +21,7 @@ const Article = () => {
     const goBack = () => navigate(-1);
 
     useEffect(() => {
-        fetch(`https://neilb-nc-news-server.herokuapp.com/api/articles/${article_id}`)
+        getArticle(article_id)
 
             .then(res => {
                 if (res.ok) {

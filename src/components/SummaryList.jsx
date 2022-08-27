@@ -4,6 +4,7 @@ import SummaryCard from './SummaryCard.jsx';
 import SortBar from './SortBar.jsx';
 import PagBar from './PagBar.jsx';
 import ErrorComponent from './ErrorComponent.jsx';
+import { getSummaries } from '../utils/api.js';
 
 const SummaryList = () => {
     const [summaryList, setSummaryList] = useState([]);
@@ -15,6 +16,8 @@ const SummaryList = () => {
     const { topic } = useParams();
 
     useEffect(() => { 
+        setIsLoading(true);
+        
         let path = 'https://neilb-nc-news-server.herokuapp.com/api/articles';
 
         if (topic) {
@@ -23,9 +26,7 @@ const SummaryList = () => {
             path += `?sort_by=${selectedButton}&order=${sortDirection}`;
         }
 
-        setIsLoading(true);
-        
-        fetch(path)
+        getSummaries(path)
             .then(res => {
                 if (res.ok) {
                     return res.json();
