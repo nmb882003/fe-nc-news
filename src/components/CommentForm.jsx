@@ -12,10 +12,10 @@ const CommentForm = ({ setShowButtons, setShowForm, article_id, setNumberOfComme
         postComment(article_id, newComment)
             .then(res => res.json())
             .then(() => {
-                alert('Your comment has been sucessfully posted!');
-                setNewComment('');
-                setDisableOnSubmit(false);
                 setNumberOfComments((current) => current + 1);
+                alert('Your comment has been sucessfully posted!');
+                setShowForm(false);
+                setShowButtons(true);
             })
     }
 
