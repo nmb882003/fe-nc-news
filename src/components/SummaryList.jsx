@@ -48,7 +48,13 @@ const SummaryList = () => {
     return (
         <>
             {error ? <ErrorComponent msg={error.msg} code={error.status} /> :
-                isLoading ? <p>Please wait while article data loads... </p> :
+                isLoading ? (
+                <>
+                <div>
+                </div>
+                <p className="summarylist-loading">Please wait while article data loads... </p>
+                </>
+                 ) :
                     <div className="summarylist-container">
                         <SortBar sortDirection={sortDirection} setSortDirection={setSortDirection} selectedButton={selectedButton} setSelectedButton={setSelectedButton} />
                         <ul className="summarylist">

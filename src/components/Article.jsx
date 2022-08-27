@@ -43,8 +43,15 @@ const Article = () => {
 
     return (
         <>
-            {error ? <ErrorComponent msg={error.msg} code={error.status}/> :
-                isLoading ? <p>Please wait while we fetch your article...</p> :
+            {error ? <ErrorComponent msg={error.msg} code={error.status} /> :
+                isLoading ? (
+                    <>
+                        <div>
+                            
+                        </div>
+                        <p className="article-loading">Please wait while we fetch your article...</p>
+                    </>
+                ) :
                     <div className="article-container">
                         <div className="articlecard-container">
                             <ArticleCard article={article} showComments={showComments} setShowComments={setShowComments} setShowForm={setShowForm} showButtons={showButtons} setShowButtons={setShowButtons} />

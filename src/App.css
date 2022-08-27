@@ -71,8 +71,8 @@ p {
 }
 
 .home-body {
-  margin: 3rem 0;
-  font-size: 1.5rem;
+  margin: 5rem 0;
+  font-size: 1rem;
 }
 
 .sortbar-outer {
@@ -130,6 +130,11 @@ p {
   row-gap: 1.25rem;
 }
 
+.summarylist-loading {
+  margin: 5rem 0;
+  font-size: 1rem;
+}
+
 .summarycard {
   width: 100%;
   max-width: 800px;
@@ -171,6 +176,11 @@ p {
   justify-content: flex-start;
   margin: 1rem auto;
   width: 95%;
+}
+
+.article-loading {
+  margin: 5rem 0;
+  font-size: 1rem;
 }
 
 .articlecard {
