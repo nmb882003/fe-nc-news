@@ -1,10 +1,10 @@
-import { updateArticleVotes } from '../utils/api.js';
+import { patchArticleVotes } from '../utils/api.js';
 
 const VoteButton = ({ article, setUserVotes }) => {
 
     const incrementVotes = () => {
         setUserVotes(current => current + 1);
-        updateArticleVotes(1, article)
+        patchArticleVotes(1, article)
             .then(res => {
                 if (!res.ok) setUserVotes(current => current - 1);
             })
@@ -12,7 +12,7 @@ const VoteButton = ({ article, setUserVotes }) => {
 
     const decrementVotes = () => {
         setUserVotes(current => current - 1);
-        updateArticleVotes(-1, article)
+        patchArticleVotes(-1, article)
             .then(res => {
                 if (!res.ok) setUserVotes(current => current + 1);
             })

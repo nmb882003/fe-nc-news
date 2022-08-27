@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { postComment } from '../utils/api.js';
 
 const CommentForm = ({ setShowButtons, setShowForm, article_id, setNumberOfComments }) => {
     const [newComment, setNewComment] = useState('');
@@ -8,12 +9,7 @@ const CommentForm = ({ setShowButtons, setShowForm, article_id, setNumberOfComme
         event.preventDefault();
         setDisableOnSubmit(true);
 
-        fetch(`https://neilb-nc-news-server.herokuapp.com/api/articles/${article_id}/comments`, {
-            method: 'POST', body: JSON.stringify({ username: "grumpy19", body: newComment }),
-            headers: {
-                'Content-type': 'application/json; charset=UTF-8',
-            }
-        })
+        postComment(article_id, newComment)
             .then(res => res.json())
             .then(() => {
                 alert('Your comment has been sucessfully posted!');
