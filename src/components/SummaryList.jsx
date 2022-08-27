@@ -15,9 +15,9 @@ const SummaryList = () => {
 
     const { topic } = useParams();
 
-    useEffect(() => { 
+    useEffect(() => {
         setIsLoading(true);
-        
+
         let path = 'https://neilb-nc-news-server.herokuapp.com/api/articles';
 
         if (topic) {
@@ -28,12 +28,7 @@ const SummaryList = () => {
 
         getSummaries(path)
             .then(res => {
-                if (res.ok) {
-                    return res.json();
-                }
-                else {
-                    return Promise.reject({ status: res.status, msg: res.statusText });
-                }
+                return (res.ok) ? res.json() : Promise.reject({ status: res.status, msg: res.statusText })
             })
 
             .then(({ articles }) => {
@@ -49,12 +44,11 @@ const SummaryList = () => {
         <>
             {error ? <ErrorComponent msg={error.msg} code={error.status} /> :
                 isLoading ? (
-                <>
-                <div>
-                </div>
-                <p className="summarylist-loading">Please wait while article data loads... </p>
-                </>
-                 ) :
+                    <div>
+                        <div></div>
+                        <p className="summarylist-loading">Please wait while article data loads... </p>
+                    </div>
+                ) : (
                     <div className="summarylist-container">
                         <SortBar sortDirection={sortDirection} setSortDirection={setSortDirection} selectedButton={selectedButton} setSelectedButton={setSelectedButton} />
                         <ul className="summarylist">
@@ -68,6 +62,7 @@ const SummaryList = () => {
                         </ul>
                         <PagBar />
                     </div>
+                )
             }
         </>
     )

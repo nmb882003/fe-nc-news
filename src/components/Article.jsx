@@ -24,12 +24,7 @@ const Article = () => {
         getArticle(article_id)
 
             .then(res => {
-                if (res.ok) {
-                    return res.json();
-                }
-                else {
-                    return Promise.reject({ status: res.status, msg: res.statusText });
-                }
+                return (res.ok) ? res.json() : Promise.reject({ status: res.status, msg: res.statusText });
             })
 
             .then(({ article }) => {
@@ -46,9 +41,7 @@ const Article = () => {
             {error ? <ErrorComponent msg={error.msg} code={error.status} /> :
                 isLoading ? (
                     <>
-                        <div>
-                            
-                        </div>
+                        <div></div>
                         <p className="article-loading">Please wait while we fetch your article...</p>
                     </>
                 ) :
