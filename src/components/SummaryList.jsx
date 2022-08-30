@@ -11,6 +11,8 @@ const SummaryList = () => {
     const [isLoading, setIsLoading] = useState(true);
     const [sortDirection, setSortDirection] = useState("desc");
     const [selectedButton, setSelectedButton] = useState("created_at");
+    const [resultsEnd, setResultsEnd] = useState(10);
+    const [totalCount, setTotalCount] = useState(0);
     const [error, setError] = useState(null);
 
     const { topic } = useParams();
@@ -34,6 +36,7 @@ const SummaryList = () => {
             .then(({ articles }) => {
                 setSummaryList(articles);
                 setIsLoading(false);
+                if (articles.length) setTotalCount(articles[0].total_count);
             })
 
             .catch(err => setError(err));
@@ -60,7 +63,7 @@ const SummaryList = () => {
                                 )
                             })}
                         </ul>
-                        <PagBar />
+                        <PagBar resultsEnd={resultsEnd} setResultsEnd={setResultsEnd} totalCount={totalCount}/>
                     </div>
                 )
             }

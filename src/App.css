@@ -103,11 +103,19 @@ p {
 }
 
 .pagbar {
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 0.5rem 0;
 }
 
-.pagbar p {
+.pagbar-text {
   margin: 0;
+}
+
+.pagbar-button {
+  margin: 0 2.5rem;
 }
 
 .summarylist-container {
@@ -342,6 +350,10 @@ p {
   }
 
   .link {
+    font-size: 1.25rem;
+  }
+
+  .pagbar-text {
     font-size: 1.25rem;
   }
 

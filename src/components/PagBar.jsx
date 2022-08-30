@@ -1,7 +1,12 @@
-const PagBar = () => {
+const PagBar = ({resultsEnd, setResultEnd, totalCount}) => {
+    const doStuff = () => {
+        console.log("click!")    
+    }
+
     return (
         <div className="pagbar">
-            <p>Pagination will appear here!</p>
+            <p className="pagbar-text">Showing results 1 - {resultsEnd} of {totalCount}</p>
+            <button className="pagbar-button" onClick={() => doStuff()}>Load more</button>
         </div>
     )
 }
