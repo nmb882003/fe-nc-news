@@ -7,7 +7,7 @@ const ErrorComponent = ({ msg, code }) => {
             <h3 className="errorcomponent-details">Error status {code}: {msg}</h3>
             {code === 400 && <p className="errorcomponent-legend">Looks like you're searching for a topic that doesn't exist! Please choose another one and try again. Might we suggest 'coding'?</p>}
             {code === 404 && <p className="errorcomponent-legend">Unfortunately there is no article in our database with that article_id. Please try searching for a different article.</p>}
-            <Link to="/">Return to Home</Link>
+            <Link to="/">Back to Home</Link>
         </div>
     )
 }

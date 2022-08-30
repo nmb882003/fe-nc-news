@@ -12,7 +12,7 @@ const SummaryList = () => {
     const [sortDirection, setSortDirection] = useState("desc");
     const [selectedButton, setSelectedButton] = useState("created_at");
     const [resultsEnd, setResultsEnd] = useState(10);
-    const [totalCount, setTotalCount] = useState(0);
+    const [totalResults, setTotalResults] = useState(0);
     const [error, setError] = useState(null);
 
     const { topic } = useParams();
@@ -36,12 +36,14 @@ const SummaryList = () => {
             .then(({ articles }) => {
                 setSummaryList(articles);
                 setIsLoading(false);
-                if (articles.length) setTotalCount(articles[0].total_count);
+                if (articles.length) setTotalResults(articles[0].total_count);
             })
 
             .catch(err => setError(err));
 
     }, [topic, sortDirection, selectedButton])
+
+    // add second useEffect, trigger with a state variable loadMore, use if loadMore === true then add onto existing array in state;
 
     return (
         <>
@@ -63,7 +65,7 @@ const SummaryList = () => {
                                 )
                             })}
                         </ul>
-                        <PagBar resultsEnd={resultsEnd} setResultsEnd={setResultsEnd} totalCount={totalCount}/>
+                        <PagBar resultsEnd={resultsEnd} setResultsEnd={setResultsEnd} totalResults={totalResults}/>
                     </div>
                 )
             }

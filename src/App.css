@@ -103,19 +103,16 @@ p {
 }
 
 .pagbar {
-  width: 95%;
+  width: 90%;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0.5rem 0;
+  column-gap: 5%;
+  margin: 0.75rem 0;
 }
 
 .pagbar-text {
   margin: 0;
-}
-
-.pagbar-button {
-  margin: 0 2.5rem;
 }
 
 .summarylist-container {
@@ -444,10 +441,6 @@ p {
 
   .link {
     font-size: 1.25rem;
-  }
-
-  .sortbar-inner {
-    margin: 1rem 0;
   }
 
   .pagbar {
