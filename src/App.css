@@ -350,10 +350,21 @@ p {
     font-size: 1.25rem;
   }
 
+  .home-body {
+    font-size: 1.25rem;
+  }
+
+  .summarylist-loading {
+    font-size: 1.25rem;
+  }
+
   .pagbar-text {
     font-size: 1.25rem;
   }
 
+  .article-loading {
+    font-size: 1.25rem;  
+  }
   .articlecard-heading {
     font-size: 2rem;
     font-weight: 600;
