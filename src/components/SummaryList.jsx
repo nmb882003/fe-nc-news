@@ -1,49 +1,46 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import { getSummaries } from '../utils/api.js';
+import ErrorComponent from './ErrorComponent.jsx';
 import SummaryCard from './SummaryCard.jsx';
 import SortBar from './SortBar.jsx';
 import PagBar from './PagBar.jsx';
-import ErrorComponent from './ErrorComponent.jsx';
-import { getSummaries } from '../utils/api.js';
 
 const SummaryList = () => {
     const [summaryList, setSummaryList] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     const [sortDirection, setSortDirection] = useState("desc");
     const [selectedButton, setSelectedButton] = useState("created_at");
-    const [resultsEnd, setResultsEnd] = useState(10);
     const [totalResults, setTotalResults] = useState(0);
+    const [currentPage, setCurrentPage] = useState(1);
+    const [resultsEnd, setResultsEnd] = useState(10);
     const [error, setError] = useState(null);
 
     const { topic } = useParams();
 
     useEffect(() => {
+        let path = `https://neilb-nc-news-server.herokuapp.com/api/articles?sort_by=${selectedButton}&order=${sortDirection}`;
+
+        if (topic) path += `&topic=${topic}`;
+
         setIsLoading(true);
-
-        let path = 'https://neilb-nc-news-server.herokuapp.com/api/articles';
-
-        if (topic) {
-            path += `?topic=${topic}&sort_by=${selectedButton}&order=${sortDirection}`;
-        } else {
-            path += `?sort_by=${selectedButton}&order=${sortDirection}`;
-        }
+        setCurrentPage(1);
+        setResultsEnd(10);
 
         getSummaries(path)
             .then(res => {
-                return (res.ok) ? res.json() : Promise.reject({ status: res.status, msg: res.statusText })
+                return (res.ok) ? res.json() : Promise.reject({ status: res.status, msg: res.statusText });
             })
 
             .then(({ articles }) => {
                 setSummaryList(articles);
                 setIsLoading(false);
-                if (articles.length) setTotalResults(articles[0].total_count);
+                setTotalResults(parseInt(articles[0].total_count));
             })
 
             .catch(err => setError(err));
 
     }, [topic, sortDirection, selectedButton])
-
-    // add second useEffect, trigger with a state variable loadMore, use if loadMore === true then add onto existing array in state;
 
     return (
         <>
@@ -65,7 +62,7 @@ const SummaryList = () => {
                                 )
                             })}
                         </ul>
-                        <PagBar resultsEnd={resultsEnd} setResultsEnd={setResultsEnd} totalResults={totalResults}/>
+                        <PagBar resultsEnd={resultsEnd} setResultsEnd={setResultsEnd} totalResults={totalResults} currentPage={currentPage} setCurrentPage={setCurrentPage} setSummaryList={setSummaryList} selectedButton={selectedButton} sortDirection={sortDirection} topic={topic}/>
                     </div>
                 )
             }
