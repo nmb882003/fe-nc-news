@@ -1,6 +1,8 @@
 # NC News Reader
 
-NC News Reader is a front-end client built with React. It was built during the frontend portion of the Northcoders coding bootcamp (April 2022 cohort).  
+NC News Reader is a news content rating and discussion web app, built during the frontend portion of the Northcoders coding bootcamp (April 2022 cohort). 
+
+The app provides news articles that are divided into categories. The user can choose to view summaries of all articles or of those in a specific category. Clicking on the main title of a summary opens up the article in full, and each article can be voted up or down using the UI. Users can also add comments about an article.
 
 A hosted version of this project can be viewed at: https://neilb-nc-news-reader.netlify.app/
 
@@ -8,11 +10,11 @@ The hosted version of the backend for this project can be viewed at: https://nei
 
 The GitHub repository for the backend to this project is located at: https://github.com/nmb882003/be-nc-news
 
+If you are viewing the hosted version of the app, please be aware that it is hosted on a free service and so the hosting servers will take approximately 15 seconds to wake up on first launch! 
+
 ## About
 
-NC News Reader is a news content rating and discussion website. It has news articles that are divided into categories. The user can choose to view summaries of all articles or of those in a specific category. Clicking on a summary opens up the article in full, and each article can be up/down voted using the UI. Users can also add comments about an article.
-
-The app is built in React and uses newer features such as functional components, hooks and ReactRouter(v6). Optimistic rendering is also employed where appropriate to improve the user experience. The app was built using responsive design and a mobile-first approach and can be viewed equally well on mobile, tablet and laptop displays.     
+The app is built as a single-page application with React. It uses newer features such as functional components, Hooks and React Router v6. Optimistic rendering is also employed where appropriate to improve the user experience. The app was built using responsive design and a mobile-first approach and is designed to be viewed on mobile, tablet and laptop displays.
 
 ## Installation
 
@@ -34,6 +36,7 @@ $ npm start
 
 ## Requirements
 
-To run the app locally you will need to have `node v17.8` or higher installed. 
-
+To run the app locally you will need to have `Node.js` v17.8 or higher installed. 
+  
+  
 Enjoy!
